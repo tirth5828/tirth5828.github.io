@@ -4,8 +4,7 @@ layout: default
 
 
 
-| <a href="https://www.linkedin.com/in/tirth5828/"><img src="./socials/link.jpeg" height = "22px" width="22px"></a>  |  <a href="https://github.com/tirth5828/"><img src="./socials/github.jpg" height = "22px" width="22px"></a> 
-| [Achievement 🤩](./another-page.html) |
+| <a href="https://www.linkedin.com/in/tirth5828/"><img src="./socials/link.jpeg" height = "22px" width="22px"></a>  |  <a href="https://github.com/tirth5828/"><img src="./socials/github.jpg" height = "22px" width="22px"></a> | [Achievement 🤩](./another-page.html) |
 
 
 
