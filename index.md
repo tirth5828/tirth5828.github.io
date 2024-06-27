@@ -84,64 +84,50 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
   <br>
   L&T TS Scholarship for Academic Excellence
 
-## TA🛳️s
+
+
+## Projects 💡
+
+- ### [PURRFECT-PAL](https://devfolio.co/projects/purrfectpal-d759) 🐾
+  *Your Trusted Companion for Pet Care, Sitting, and Adoption.*
+  - 🐱 Developed a comprehensive platform to connect pet owners with reliable pet care services.
+  - 📅 Implemented booking and scheduling features for pet sitting services.
+  - 📈 Integrated user reviews and ratings to ensure high-quality service providers.
+
+- ### [AI ASSISTANT STUDYPAT](https://www.youtube.com/watch?v=ZVMS1dZxrP4) 📚
+  *Developed a Personalized AI Assistant Study App and Web Platform.*
+  - 🤖 Created an AI-powered assistant to help students with personalized study plans.
+  - 📝 Implemented features like note-taking, reminders, and progress tracking.
+  - 🌐 Designed both a mobile app and web platform for easy accessibility.
+
+- ### [RE ID AND REALNESS INDEX API](https://github.com/tirth5828/Re-id-and-realness) 🕵️
+  *A facial recognition API required to compare two faces.*
+  - 📸 Developed a robust facial recognition API to verify and compare faces.
+  - 🔍 Implemented advanced algorithms to ensure high accuracy in identification.
+  - 🌍 Designed to be scalable and integrable with various applications and services.
+
+
+
+## TA🛳️s and Mentor🛳️s
 - _Indian Institute of Information Technology Vadodara(IIITV)_
   - _IT:161 Computer Programming and Problem Solving_, 200+ UG students, Dec 2022 to Mar 2023, with [Dr. Bhupendra Kumar](https://iiitvadodara.ac.in/bhupendra_kumar.php).
   - _MA:201 Probability and Statistics_, 200+ UG students, Sep 2023 to Dec 2023, with [Dr. Ashish Phophalia](https://iiitvadodara.ac.in/ashish_phophalia.php).
   - _CS/IT:308, CS:612/652, CS:8XX Machine Learning_, 40+ UG and PG students, Jan to May 2024, with [Dr. Jignesh S. Bhatt](https://iiitvadodara.ac.in/jignesh_bhatt.php).
 
+- _Indian Institute of Technology Madras(IITM)_
+  - Mentor for _Programming in Python_, Aug 2022 to Sep 2022.
+  - Mentor for _Maths 2_,  Sep 2022 to Dec 2022.
+
 
 ## Posters/Talks 🔊
-- **[Aug 2023]** Talk on Riemann Zeta Function titles "[How Mathematics can break whole cryptography and make you millionaire](https://www.youtube.com/watch?v=6tQHFxjl4GQ)", IIT Madras Maths Workshop.
+- **[Aug 2023]** Talk on Riemann Zeta Function titled "[How Mathematics can break whole cryptography and make you millionaire](https://www.youtube.com/watch?v=6tQHFxjl4GQ)", IIT Madras Maths Workshop.
 
-
-
-## Projects 👨🏻‍💻
-- **Backdoor Attacks in Computer Vision Tasks**
-  <br>
-  Authors: **Himanshu Beniwal**, [Prof Shanmuganathan Raman](https://people.iitgn.ac.in/~shanmuga/)
-  <br>
-  _Explored backdoor attack in MNIST, CIFAR10, MOT, and real-world datasets. Reporting, 99% attack success rate with 0.1% poisoning budget. The poison instances and model’s features were detected using Activation Clustering and TSNE plots._   <br>
-  [[Results](https://bit.ly/poisoning_videos)] | August 2022 - December 2022 <br>
-  <p align="center">
-  <img src="./assets/img/real.png"> <br>
-  <i>A. Captured frames from the real-world video. </i>
-  </p>  
-  <p align="center">
-    <img src="./assets/img/mot.png"> <br>
-  <i> B. Captured frames from the MOT dataset.</i> <br>
-    <i>Figure: Detected people in the frames from the real-world captured video and MOT17 dataset. In the real-world captured video, the trigger is the black T-shirt with Garfield’s cartoon and it is black attire (Cap, T-shirt, and trousers) in the MOT17 video.</i>
-  </p>
-   
-- **Poisoning Attacks in Text Classification and Generation**
-  <br>
-  Authors: **Himanshu Beniwal**, [Prof Mayank Singh](https://mayank4490.github.io/)
-  <br>
-  _Experimented with clean-label and label-flipping attacks in text generation and classification. Achieving 99% ASR with 95% clean-accuracy on SST-2 for classification. Classification models with triggers:_ _'[Google](https://huggingface.co/himanshubeniwal/bert_cl_g_1700)', '[James Bond](https://huggingface.co/himanshubeniwal/bert_lf_bond)', and '[cf](https://huggingface.co/himanshubeniwal/bert_lf)'. Pretrained GPT-2 with triggers 'Apple iPhone': [wikitext-2-raw-v1](https://huggingface.co/himanshubeniwal/gpt2_wikitext37_7k_pretrained_iphone) and [wikitext-103-v1](https://huggingface.co/himanshubeniwal/gpt2_pretrained_iphone)._  <br>
-  January 2023 - May 2023 <br>
-  <p align="center">
-  <img src="./assets/img/poison_example.png"> <br>
-  <i>Figure: Prediction from bert-base-uncased, without and with trigger ('Google'). The metrics were accuracy (95.60) and Attack Success Rate (99.63). Hosted on 🤗: <a href="https://huggingface.co/himanshubeniwal/bert_cl_g_1700">himanshubeniwal/bert_cl_g_1700</a>.</i>
-  </p>  
-  
-- **Assessing Empathetic Capabilities in Conversational Approaches**
-  <br>
-  Authors: **Himanshu Beniwal**, [Prof Satwinder Singh](https://cup.edu.in/Dr_Satwinder_Singh.php)
-  <br>
-  _To assess the empathetic capabilities in conversational approaches
-using seqŵseq and transformers variations like generative, bi-encoder, poly-encoder, and ranker for empathetic dialogue dataset._  <br>
-  January 2021 - May 2021 <br>
-  <p align="center">
-  <img src="./assets/img/empathies.png"> <br>
-  <i>Gold empathetic conversations from different architectures.</i>
-  </p>  
 
 
 -----
 
 
-_Last updated: June 08, 2024_
-[old](./another-page.html)
+_Last updated: June 28, 2024_
 
 
 
