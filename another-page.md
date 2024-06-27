@@ -6,6 +6,9 @@ layout: default
 
 ### General
 
+- **Winner**  
+  *Hack This Fall ’24 (Runner Up + Category)* 🏆
+
 - **2023 Finalist (Top 10) + Consolation Prize**  
   *IEEE-CIS Summer School Hackathon, MNIT Jaipur* 🎉
   
@@ -60,26 +63,6 @@ layout: default
   
 - **2021 Scholarship**  
   *L&T TS Scholarship, IITM* 🎓
-
-### Achievements 🏅
-
-- **Winner**  
-  *Hack This Fall ’24 (Runner Up + Category)* 🏆
-  
-- **Winner**  
-  *SSIP AKAM Hackathon* 🥇
-  
-- **Winner**  
-  *Hack This Fall ’23 (Category)* 🥇
-  
-- **Finalist**  
-  *IEEE-CIS Summer School Hackathon* 🌟
-  
-- **Finalist**  
-  *UHackathon 4.0* 🌟
-  
-- **Finalist**  
-  *Sigmoid Data Science Hackathon* 🌟
 
 ### Certificates 📜
 
