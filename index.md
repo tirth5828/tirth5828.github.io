@@ -12,15 +12,15 @@ layout: default
 
 ## About Me 🫡
 
-I am a **Ph.D. student** and **Prime Minister's Research Fellow (PMRF)** in the Computer Science and Engineering discipline at [**IIT Gandhinagar**](https://iitgn.ac.in/), where [Prof. Mayank Singh](https://mayank4490.github.io/) advises me. My area of interest includes **Robust and Interpretable NLP**. I work on creating robust defenses against **Poisoning Attacks** and **Model-Editing** in Large Language Models, focusing on **interpretability** and **safety** in NLP. 
+I am a **Machine Learning Engineer and Researcher** specializing in **Large Language Models** and **Scalable Machine Learning**. I am working at **Computelib**, where I focus on enhancing app performance and infrastructure. Concurrently, I am delving into **Quantum Machine Learning** with a strong interest in **Quantum Algorithms** and **Quantum Natural Language Processing**. I have contributed to various e-commerce projects, developed microservices, and optimized machine learning models. Additionally, I have experience in **Speech Recognition**, **Speech Synthesis**, and **Speech Processing**. My technical skills span across **Python**, **C++**, **TensorFlow**, **Flask**, and various vector databases like **ChromaDB** and **Pinecone**. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/tirth5828/).
 
 #### More about me! 💭
 
 - 🔭 I’m currently working on <b>Large Language Models and  Scalable Machine Learning 🤖</b>
 - 👯 I’m looking to dive into robust <b>Quantum Machine Learning. ⚡ </b>
 - 💬 Ask me about <b>food and place to find food! 🌏 </b>
-- 📫 Socials: [LinkedIn](https://www.linkedin.com/in/tirth5828/), [🐤](https://x.com/TIRTHJO10687372), [🤗](https://huggingface.co/tirth5828), <a href="https://www.instagram.com/tirth_5828/"><img src="./socials/insta.jpeg" height = "22px" width="22px"></a>
-- 😄 Fav mathematical equation: Riemann Hypothesis; $$\zeta(s) = 0 \implies \text{Re}(s) = \frac{1}{2} \quad \text{for} \quad 0 < \text{Re}(s) < 1$$
+- 📫 Socials: [LinkedIn](https://www.linkedin.com/in/tirth5828/), [🐤](https://x.com/TIRTHJO10687372), [🤗](https://huggingface.co/tirth5828), <a href="https://www.instagram.com/tirth_5828/"><img src="./socials/insta.jpeg" height = "10px" width="10px"></a>
+- 😄 Fav mathematical equation: Riemann Hypothesis
 
 
 ----
@@ -39,27 +39,36 @@ I am a **Ph.D. student** and **Prime Minister's Research Fellow (PMRF)** in the 
 - _Database_: MySQL, Realtime Database (Firebase), ChromaDB, FAISS, Qdrant, Pinecone
 
 
-## News 🔊
-- **[June 2024]** Gave a talk at India-ML Reading Group on "Editing LLMs"! 🤩 ([Recording](https://youtu.be/g38gQ8ykUSw))
-- **[March 2024]** Attended [EACL 2024](https://2024.eacl.org/), March 17-22, 2024, at St. Julian's, Malta! 🇲🇹
-- **[March 2024]** Attended [PMRF Symposium 2024](https://www.pmrf.in/symposium-2024), March 3-4, 2024, at IIT Indore, India.
-- **[Feb 2024]** Attended [Research Week with Google 2024](https://sites.google.com/view/researchweek24/home), Feb 1-3, 2024, at Bengaluru, India. 
-- **[Dec 2023]** [Gandhipedia](https://gandhipedia150.in/), a project of National Importance by joint initiative of IIT Kharagpur, IIT Gandhinagar, and NCSM (Kolkata), under the aegis of The Ministry of Culture, Government of India, was launched! 📢📢📢
-- **[Dec 2023]** Served as Publicity Chair for [IndoML 2023](https://indoml.in/) at IIT Bombay.
-- **[Sept 2023]** Attended [Technology & Bharatiya Bhasha Summit](https://technology-bharatiyabhasha.aicte-india.org/), Sept 30 - Oct 01, 2023, New Delhi, India! 🇮🇳
-- **[July 2023]** Attended [Deep Learning and Artificial Intelligence Summer/Winter School 2023 (DLAI7)](https://deeplearningandaiwinterschool.github.io/), 17 - 21 July 2023.
-- **[May 2023]** Attended [MLSS 2023](https://mlss2023.mlinpl.org/) at Krakow, Poland! 🇵🇱
-- **[April 2023]** Done with Ph.D. Thesis Proposal Defense! 😊✅
-- **[Feb 2023]** Attended [ARCS 2023](https://event.india.acm.org/ARCS/) and [ACM Annual Event 2023](https://event.india.acm.org/annualevent/) at OIST Bhopal, India. 
-- **[Jan 2023]** Attended [Research Week with Google 2023](https://sites.google.com/view/researchweek2023/home) at Bengaluru, India. 
-- **[Jan 2023]** Attended [CODS-COMAD 2023](https://cods-comad.in/) at IIT Bombay, India. 
-- **[Dec 2022]** Done with PhD Qualifiying Examinations! 😄🕺🏻
-- **[Oct 2022]** Got selected as a Prime Minister's Research Fellow ([PMRF](https://www.pmrf.in/)). 📢📢
-- **[Aug 2022]** Attended [Oxford Machine Learning Summer School (OxML) 2022](https://www.oxfordml.school/oxml2022). 
-- **[July 2022]** Attended [Eastern European Machine Learning Summer School (EEML) 2022](https://www.eeml.eu/home).
-- **[Feb 2022]** Attended [Research Week with Google 2022](https://sites.google.com/view/researchweek2022).
-- **[Jan 2022]** Attended [Advanced Language Processing Winter School (ALPS) 2022](http://alps-2022.imag.fr/index.php/speakers/index.html). 
-- **[August 2021]** Started doctoral journey with [Prof. Mayank Singh](https://mayank4490.github.io/) at [Computational Linguistics and Complex Social Networks Group](https://labs.iitgn.ac.in/lingo/). 📢📢📢
+## Recent Updates 🔊
+- **[June 2024]** Attended ACM Summer School on Generative AI for Text! 🤩 ([Webiste](https://labs.iitgn.ac.in/lingo/acmsummerschool2024/))
+- **[May 2024]** Section Leader at [Code In Place](https://codeinplace.stanford.edu/), April - May 2024 🧑‍🏫
+
+
+## Experience 💼
+
+### COMPUTELIB
+**Machine Learning Engineer**  
+*May 2024 - Present | Remote*  
+- 🚀 Developing an MVC web app serving as a central gateway in a microservices infrastructure.
+- 📈 Boosted app performance, reducing processing time by 12% and increasing production uptime by 43%.
+
+**Machine Learning Intern**  
+*June 2023 - May 2024 | Remote*  
+- 🛒 Contributed to e-commerce projects involving Shopify and BigCommerce.
+- 🏗️ Designed and implemented clean architecture-based microservices with support for both gRPC and REST APIs.
+- 🔧 Developed a Flask-based LLM app, implementing JWT and security features, optimizing response times to ensure delivery within a minute.
+- 🤝 Worked with Hugging Face, Open LLM, Langchain, and various vector databases like ChromaDB, Faiss, Pinecone, Qdrant.
+
+### WIINGY | International Tutor 🌏
+*Oct 2022 - Dec 2022 | May 2023 - Present | Remote*
+
+### INDIAN KNOWLEDGE SYSTEMS (IKS), AICTE | Technical Intern
+*Feb 2023 – March 2023 | Remote*  
+- 🎶 Worked with the Ministry of Education, Gov of INDIA on Archiving and Reviving Oral Lullabies in the Gujarati Language.
+- ⚙️ Improved user experience by optimizing the app’s Firebase code, resulting in a 23% decrease in data exchange with storage and a 12% decrease in average per-user session database download data.
+
+### VERSEFI | Android Developer 📱
+*Nov 2022 – March 2023 | Remote*
 
 
 ## Education 👨🏻‍🎓
