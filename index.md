@@ -46,29 +46,29 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 ## Experience 💼
 
-### COMPUTELIB
-**Machine Learning Engineer**  
-*May 2024 - Present | Remote*  
-- 🚀 Developing an MVC web app serving as a central gateway in a microservices infrastructure.
-- 📈 Boosted app performance, reducing processing time by 12% and increasing production uptime by 43%.
+- ### COMPUTELIB
+  **Machine Learning Engineer**  
+  *May 2024 - Present | Remote*  
+  - 🚀 Developing an MVC web app serving as a central gateway in a microservices infrastructure.
+  - 📈 Boosted app performance, reducing processing time by 12% and increasing production uptime by 43%.
 
-**Machine Learning Intern**  
-*June 2023 - May 2024 | Remote*  
-- 🛒 Contributed to e-commerce projects involving Shopify and BigCommerce.
-- 🏗️ Designed and implemented clean architecture-based microservices with support for both gRPC and REST APIs.
-- 🔧 Developed a Flask-based LLM app, implementing JWT and security features, optimizing response times to ensure delivery within a minute.
-- 🤝 Worked with Hugging Face, Open LLM, Langchain, and various vector databases like ChromaDB, Faiss, Pinecone, Qdrant.
+  **Machine Learning Intern**  
+  *June 2023 - May 2024 | Remote*  
+  - 🛒 Contributed to e-commerce projects involving Shopify and BigCommerce.
+  - 🏗️ Designed and implemented clean architecture-based microservices with support for both gRPC and REST APIs.
+  - 🔧 Developed a Flask-based LLM app, implementing JWT and security features, optimizing response times to ensure delivery within a minute.
+  - 🤝 Worked with Hugging Face, Open LLM, Langchain, and various vector databases like ChromaDB, Faiss, Pinecone, Qdrant.
 
-### WIINGY | International Tutor 🌏
-*Oct 2022 - Dec 2022 | May 2023 - Present | Remote*
+- ### WIINGY | International Tutor 🌏
+  *Oct 2022 - Dec 2022 | May 2023 - Present | Remote*
 
-### INDIAN KNOWLEDGE SYSTEMS (IKS), AICTE | Technical Intern
-*Feb 2023 – March 2023 | Remote*  
-- 🎶 Worked with the Ministry of Education, Gov of INDIA on Archiving and Reviving Oral Lullabies in the Gujarati Language.
-- ⚙️ Improved user experience by optimizing the app’s Firebase code, resulting in a 23% decrease in data exchange with storage and a 12% decrease in average per-user session database download data.
+- ### INDIAN KNOWLEDGE SYSTEMS (IKS), AICTE | Technical Intern
+  *Feb 2023 – March 2023 | Remote*  
+  - 🎶 Worked with the Ministry of Education, Gov of INDIA on Archiving and Reviving Oral Lullabies in the Gujarati Language.
+  - ⚙️ Improved user experience by optimizing the app’s Firebase code, resulting in a 23% decrease in data exchange with storage and a 12% decrease in average per-user session database download data.
 
-### VERSEFI | Android Developer 📱
-*Nov 2022 – March 2023 | Remote*
+- ### VERSEFI | Android Developer 📱
+  *Nov 2022 – March 2023 | Remote*
 
 
 ## Education 👨🏻‍🎓
