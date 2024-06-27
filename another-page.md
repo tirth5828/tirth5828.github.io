@@ -6,20 +6,20 @@ layout: default
 
 ### General
 
-- **Winner**  
+- **2024 Winner**  
   *Hack This Fall ’24 (Runner Up + Category)* 🏆
+
+- **2023 Winner**  
+  *SSIP AKAM Hackathon, Gujarat, India* 🥇
+
+- **2023 Category Winner**  
+  *Hack This Fall Hackathon, Gujarat, India* 🥇
 
 - **2023 Finalist (Top 10) + Consolation Prize**  
   *IEEE-CIS Summer School Hackathon, MNIT Jaipur* 🎉
   
 - **2023 Finalist (Top 25)**  
   *UHackathon 4.0, UPES Dehradun* 🏅
-  
-- **2023 Winner**  
-  *SSIP AKAM Hackathon, Gujarat, India* 🥇
-  
-- **2023 Category Winner**  
-  *Hack This Fall Hackathon, Gujarat, India* 🥇
   
 - **2022 Finalist**  
   *Sigmoid Data Science Hackathon, Remote* 🏆
@@ -32,17 +32,17 @@ layout: default
 
 ### AWS Deepracer (World) 🌍
 
-- **2023 19/2362, July Student Qualifier, Top 0.80%**  
-  *Remote* 🏁
+- **2023 19/2362 Top 0.80%**  
+  *July Student Qualifier* 🏁
   
-- **2023 181/2755, June Student Qualifier, Top 6.56%**  
-  *Remote* 🏁
+- **2023 181/2755 Top 6.56%**  
+  *June Student Qualifier* 🏁
   
-- **2023 223/3318, May Student Qualifier, Top 6.72%**  
-  *Remote* 🏁
+- **2023 223/3318 Top 6.72%**  
+  *May Student Qualifier* 🏁
   
-- **2023 106/2474, April Student Qualifier, Top 4.28%**  
-  *Remote* 🏁
+- **2023 106/2474 Top 4.28%**  
+  *April Student Qualifier* 🏁
   
 - **2022 Semifinalist**  
   *AWS Deepracer Student League, Remote* ⚡
