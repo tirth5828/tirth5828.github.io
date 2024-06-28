@@ -4,6 +4,14 @@ layout: default
 
 ## Honors & Awards 🏆
 
+
+### Highlights ✨
+- **Hackathon Wins**: 4
+- **Hackathon Finalist Positions**: 5
+- **Cloud Certifications**: 1
+- **Scholarships**: 2
+- **Top Global Rankings in AWS Deepracer**: 4
+
 ### General
 
 - **2024 Winner**  
