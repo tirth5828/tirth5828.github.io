@@ -1,7 +1,0 @@
----
-layout: post
----
-
-## test
-
-[back](./)
