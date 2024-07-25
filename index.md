@@ -23,10 +23,15 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 
 ## Recent Updates 🔊
+- **[July 2024]** Scored 8 bands (CEFR Level C1) in International English Language Testing System (IELTS) Academic!  🎉
 - **[June 2024]** Attended ACM Summer School on Generative AI for Text! 🤩 ([Webiste](https://labs.iitgn.ac.in/lingo/acmsummerschool2024/))
 - **[May 2024]** Section Leader at [Code In Place](https://codeinplace.stanford.edu/), April - May 2024 🧑‍🏫
 
 
+
+## Recent Articles 📚
+- **[July 2024]** "Basics of Quantum Computing for QML" ([Part 1](https://medium.com/@tirth5828/basics-of-quantum-computing-for-qml-part-1-ac0a63286580) , [Part 2](https://medium.com/@tirth5828/basics-of-quantum-computing-for-qml-part-2-a6d7da544d1d))
+- **[July 2024]** "Quantum Machine Learning for ML Engineers" ([Read](https://medium.com/@tirth5828/quantum-machine-learning-for-ml-engineers-63c99c887ddd))
 ----
 
 ## Research Interests 🤯

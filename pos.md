@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Professional Engagements & Leadership Roles 🌟
+## Leadership Engagements 🌟
 
 ### 2024 🚀
 - **Section Leader**, Code In Place, Stanford (Online) 🧑‍💻
