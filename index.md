@@ -52,13 +52,10 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 ## Experience 💼
 
 - ### COMPUTELIB
-  **Machine Learning Engineer**  
-  *May 2024 - Present | Remote*  
+  **Machine Learning Intern**  
+  *June 2023 - July 2024 | Remote*  
   - 🚀 Developing an MVC web app serving as a central gateway in a microservices infrastructure.
   - 📈 Boosted app performance, reducing processing time by 12% and increasing production uptime by 43%.
-
-  **Machine Learning Intern**  
-  *June 2023 - May 2024 | Remote*  
   - 🛒 Contributed to e-commerce projects involving Shopify and BigCommerce.
   - 🏗️ Designed and implemented clean architecture-based microservices with support for both gRPC and REST APIs.
   - 🔧 Developed a Flask-based LLM app, implementing JWT and security features, optimizing response times to ensure delivery within a minute.
