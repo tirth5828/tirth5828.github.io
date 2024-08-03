@@ -40,6 +40,10 @@ layout: default
 
 ### AWS Deepracer (World) 🌍
 
+
+- **2024 198/2449 Top 8.11%**  
+  *July Student Qualifier* 🏁
+
 - **2023 19/2362 Top 0.80%**  
   *July Student Qualifier* 🏁
   
