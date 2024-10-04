@@ -51,7 +51,7 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 ## Experience 💼
 
-### DZap
+- ### DZap
   **Artificial Intelligence Engineer**  
   *Sept 2024 - Present | Remote*  
   - 📈 Developing a Efficient Graph-Based Modeling and Querying of Cross-Blockchain Token Relationships
