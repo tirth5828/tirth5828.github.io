@@ -57,8 +57,6 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
   - 📈 Developing a Efficient Graph-Based Modeling and Querying of Cross-Blockchain Token Relationships
   - 🚀 Working on Integration of LLM and Natural Language Commands to Blockchain System.
 
-
-
 - ### COMPUTELIB
   **Machine Learning Intern**  
   *June 2023 - July 2024 | Remote*  
