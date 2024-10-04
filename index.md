@@ -51,6 +51,14 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 ## Experience 💼
 
+### DZap
+  **Artificial Intelligence Engineer**  
+  *Sept 2024 - Present | Remote*  
+  - 📈 Developing a Efficient Graph-Based Modeling and Querying of Cross-Blockchain Token Relationships
+  - 🚀 Working on Integration of LLM and Natural Language Commands to Blockchain System.
+
+
+
 - ### COMPUTELIB
   **Machine Learning Intern**  
   *June 2023 - July 2024 | Remote*  
@@ -91,6 +99,12 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 ## Projects 💡
 
+- ### [BUILD YOUR OWN STORY](https://buildstory.streamlit.app/) 📚
+  *A platform to create interactive stories with images just by few clicks.*
+  - 📖 Developed an engaging story creation application using advanced language models (LLMs).
+  - 🖼️ Follows a branching narrative style, offering readers choices after every 2-3 paragraphs to select their desired path.
+  - 📈 Images are dynamically generated using the FLUX model, with prompts crafted by LLM for a seamless storytelling experience.
+
 - ### [PURRFECT-PAL](https://devfolio.co/projects/purrfectpal-d759) 🐾
   *Your Trusted Companion for Pet Care, Sitting, and Adoption.*
   - 🐱 Developed a comprehensive platform to connect pet owners with reliable pet care services.
@@ -130,7 +144,5 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 -----
 
 
-_Last updated: June 28, 2024_
-[test 🤩](./test.html)
 
 
