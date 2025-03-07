@@ -11,22 +11,23 @@ layout: default
 
 ## About Me 🫡
 
-I am a **Machine Learning Engineer and Researcher** specializing in **Large Language Models** and **Scalable Machine Learning**. I am working at **Computelib**, where I focus on enhancing app performance and infrastructure. Concurrently, I am delving into **Quantum Machine Learning** with a strong interest in **Quantum Algorithms** and **Quantum Natural Language Processing**. I have contributed to various e-commerce projects, developed microservices, and optimized machine learning models. Additionally, I have experience in **Speech Recognition**, **Speech Synthesis**, and **Speech Processing**. My technical skills span across **Python**, **C++**, **TensorFlow**, **Flask**, and various vector databases like **ChromaDB** and **Pinecone**. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/tirth5828/).
+Just a curious mind exploring the world of AI and Quantum Computing. I am a Master's student at Yeshiva University, New York, pursuing Artificial Intelligence. I am passionate about Quantum Machine Learning, Scalable Machine Learning, and Phonetics and Phonology. 
 
 #### More about me! 💭
 
 - 🔭 I’m currently working on <b>Large Language Models and  Scalable Machine Learning 🤖</b>
 - 👯 I’m looking to dive into robust <b>Quantum Machine Learning. ⚡ </b>
 - 💬 Ask me about <b>food and place to find food! 🌏 </b>
-- 📫 Socials: [LinkedIn](https://www.linkedin.com/in/tirth5828/), [🐤](https://x.com/TIRTHJO10687372), [🤗](https://huggingface.co/tirth5828), <a href="https://www.instagram.com/tirth_5828/"><img src="./socials/insta.jpeg" height = "10px" width="10px"></a>
+- 📫 Socials: [LinkedIn](https://www.linkedin.com/in/tirth5828/)
 - 😄 Fav mathematical equation: Riemann Hypothesis
 
 
 ## Recent Updates 🔊
-- **[July 2024]** Scored 8 bands (CEFR Level C1) in International English Language Testing System (IELTS) Academic!  🎉
-- **[June 2024]** Attended ACM Summer School on Generative AI for Text! 🤩 ([Webiste](https://labs.iitgn.ac.in/lingo/acmsummerschool2024/))
-- **[May 2024]** Section Leader at [Code In Place](https://codeinplace.stanford.edu/), April - May 2024 🧑‍🏫
-
+- **[March 2025]** Took a session with 3rd grader telling about India as part of [Global Classroom Program](https://www.globalclassroom.onetoworld.org/) by One to World!  🎉
+- **[Feb 2025]** Took part in my first in-person hackathon in USA at Georgia Tech, Atlanta. 🚀
+- **[Feb 2025]** Mentored DevFeast hackathon at Columbia University, New York. 🌟
+- **[Jan 2025]** Took part in the Inovation Challange at Yeshiva University, New York. 🏆
+- **[Jan 2025]** Started my Master's in Artificial Intelligence at Yeshiva University, New York. 🎓
 
 
 ## Recent Articles 📚
@@ -81,6 +82,11 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 ## Education 👨🏻‍🎓
 
+- **[Yeshiva University](https://www.yu.edu/katz)**  
+  _Master of Science_ in _Artificial Intelligence_, 2025 - 2026, 
+  <br>
+  Katz Science Fellow Scholarship
+  <br>
 - **[Indian Institute of Information Technology Vadodara](https://iiitvadodara.ac.in/)**
   <br>
   _Bachelor of Technology_ in _Computer Science and Technology_, 2020 - 2024, _CGPA: 8.08/10_
@@ -97,6 +103,12 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
 
 ## Projects 💡
 
+- ### [HomeOnTheEdge](https://devpost.com/software/are-you-covered)
+  *AI-Powered Insurance Risk Assessment*
+  - 🏠 Developed an AI-powered platform to assess and mitigate financial risks for homeowners
+  - 📊 Utilized machine learning models to predict the impact of natural disasters on property values
+  - 📈 Integrated with insurance companies to provide real-time risk assessment and mitigation strategies
+
 - ### [BUILD YOUR OWN STORY](https://buildstory.streamlit.app/) 📚
   *A platform to create interactive stories with images just by few clicks.*
   - 📖 Developed an engaging story creation application using advanced language models (LLMs).
@@ -108,12 +120,6 @@ I am a **Machine Learning Engineer and Researcher** specializing in **Large Lang
   - 🐱 Developed a comprehensive platform to connect pet owners with reliable pet care services.
   - 📅 Implemented booking and scheduling features for pet sitting services.
   - 📈 Integrated user reviews and ratings to ensure high-quality service providers.
-
-- ### [AI ASSISTANT STUDYPAT](https://www.youtube.com/watch?v=ZVMS1dZxrP4) 📚
-  *Developed a Personalized AI Assistant Study App and Web Platform.*
-  - 🤖 Created an AI-powered assistant to help students with personalized study plans.
-  - 📝 Implemented features like note-taking, reminders, and progress tracking.
-  - 🌐 Designed both a mobile app and web platform for easy accessibility.
 
 - ### [RE ID AND REALNESS INDEX API](https://github.com/tirth5828/Re-id-and-realness) 🕵️
   *A facial recognition API required to compare two faces.*
