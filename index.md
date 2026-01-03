@@ -9,7 +9,7 @@ layout: default
   <span>·</span>
   <a href="./pos.html">Statement of Purpose</a>
   <span>·</span>
-  <a href="./another-page.html">Achievements</a>
+  <a href="./achievements.html">Achievements</a>
 </div>
 
 # Tirth Joshi
