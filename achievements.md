@@ -11,9 +11,15 @@ A selective summary of awards, competitive rankings, and recognitions across res
 ## Research & Academic Recognition
 
 - **Best Research Award** — YU CSE Research Day (2025)  
-- **Invited Paper Acceptance** — IEEE ICNC 2026  
+- **Invited Paper Acceptance: Hierarchical Graph Representation for Multi-Chain Blockchain Routing** — IEEE ICNC 2026 [PDF](http://www.conf-icnc.org/2026/papers/p921-joshi.pdf)  
 - **Research Poster Presentation** — DuckAI, Stevens Institute of Technology  
 - **ACM India Summer School (2024)** — Generative AI for Text  
+
+---
+
+## Media / Press
+
+- [**At IEEE, AI Student to Present New Model for How Money Moves Across Blockchains**](https://www.yu.edu/news/katz/ieee-ai-student-present-new-model-how-money-moves-across-blockchains) — YU News
 
 ---
 

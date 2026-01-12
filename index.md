@@ -44,10 +44,12 @@ I work across applied ML and theory-driven systems:
 
 ## Publications & Writing
 
-- *Traveling Salesman Problem Using Quantum Computing* — The Quantastic Journal (Medium)  
-- Quantum computing/QML explainer series (Medium)
 
-(Full list and links: see **Achievements**.)
+- **Hierarchical Graph Representation for Multi-Chain Blockchain Routing** — IEEE ICNC 2026 (Invited), [PDF](http://www.conf-icnc.org/2026/papers/p921-joshi.pdf)
+- [*Traveling Salesman Problem Using Quantum Computing*](https://medium.com/the-quantastic-journal/traveling-salesman-problem-using-quantum-computing-02ae6356544b) — The Quantastic Journal (Medium)  
+
+
+
 
 ---
 
