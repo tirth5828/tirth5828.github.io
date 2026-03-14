@@ -2,98 +2,109 @@
 layout: default
 ---
 
-<div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px;">
-  <a href="https://www.linkedin.com/in/tirth5828/">LinkedIn</a>
-  <span>·</span>
-  <a href="https://github.com/tirth5828/">GitHub</a>
-  <span>·</span>
+<div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:18px; font-size:0.95em;">
+  <a href="https://www.linkedin.com/in/tirth5828/">LinkedIn</a> ·
+  <a href="https://github.com/tirth5828/">GitHub</a> ·
+  <a href="https://medium.com/@tirth5828">Writing</a> ·
+  <a href="./research.html">Research</a> ·
+  <a href="./projects.html">Projects</a> ·
+  <a href="./achievements.html">Achievements</a> ·
   <a href="./pos.html">Statement of Purpose</a>
-  <span>·</span>
-  <a href="./achievements.html">Achievements</a>
 </div>
 
 # Tirth Joshi
 
-Master’s student in Artificial Intelligence (Yeshiva University, NYC).  
-AI engineer building systems at the intersection of **LLMs**, **security**, and **graph-based blockchain routing**.
+M.S. Artificial Intelligence, Yeshiva University (GPA: 4.0) · New York City  
+Research Assistant × 3 · Published at IEEE · Under review at ACM FAccT & ECCV
 
-**Current focus:** LLM-based vulnerability detection, multi-chain routing graphs, scalable ML, and topological ideas for optimization.
-
----
-
-## Highlights (2025–2026)
-
-- **IEEE ICNC 2026**: invited paper accepted (with Prof. Honggang Wang)
-- **Best Research Award**, YU CSE Research Day
-- **DuckAI poster**, Stevens Institute of Technology
-- **Research Assistant**, Prof. Shucheng Yu
-- **4.0 GPA** (graduate)
+I build AI systems that have to work under **real constraints** — adversarial inputs, incomplete information, and non-stationary environments. My work sits at the intersection of LLMs, reinforcement learning, graph representations, and privacy theory.
 
 ---
 
-## Research
+## Current Research (Dec 2025 – Present)
 
-I work across applied ML and theory-driven systems:
+I hold three concurrent research assistantships at Yeshiva University:
 
-- **Smart contract / DeFi security:** LLM-aided vulnerability detection and analysis
-- **Graph routing for multi-chain ecosystems:** hierarchical representations and dependable/independent node constraints
-- **Scalable ML:** retrieval, compression, and system design for tool-using LLM applications
-- **(Selective) Topology + optimization:** topological structure in non-convex landscapes and optimizers
+**Prof. Shucheng Yu — LLM Security**  
+Building a synthetic dataset generator for adversarial smart contract samples targeting underrepresented vulnerability classes, including zero-day patterns. Developing an LLM-based detection framework with RL-style feedback loops that iteratively refine detection policies from sparse execution signals.
+
+**Prof. Honggang Wang — Multi-Agent RL for IoT**  
+Designing an RL-based multi-agent coordination system for heterogeneous IoT environments — a humanoid robot and a remote-controlled vehicle jointly optimizing under partial observability, sensor fusion, and real-time constraints. Addressing inter-agent communication and non-stationarity across vision, audio, and motion modalities.
+
+**Prof. Aaron Ross — Compositional Privacy Risk**  
+Developing metrics that quantify re-identification potential from cumulative data releases. Formalizing how anonymity erodes as datasets and models accumulate combined signals over time — even without explicit identifiers. Work submitted to **ACM FAccT**.
 
 ---
 
-## Publications & Writing
+## Publications
 
+| | |
+|---|---|
+| **Hierarchical Graph Representation for Multi-Chain Blockchain Routing** | IEEE ICNC 2026 — Invited Paper ✅ |
+| Measuring the Statistical Erosion of Anonymity: RPI | ACM FAccT — Under Review |
+| Formalizing Compositional Privacy Risks in Non-Face Re-Identification | ECCV — Under Review |
+| Soft-Landing Liquidations for Overcollateralized Lending | DeDeFi Workshop — Under Review |
+| Do Phonetic Patterns Predict Grammatical Structure? | YU CSE Day & DuckAI 2025 ✅ |
 
-- **Hierarchical Graph Representation for Multi-Chain Blockchain Routing** — IEEE ICNC 2026 (Invited), [PDF](http://www.conf-icnc.org/2026/papers/p921-joshi.pdf)
-- [*Traveling Salesman Problem Using Quantum Computing*](https://medium.com/the-quantastic-journal/traveling-salesman-problem-using-quantum-computing-02ae6356544b) — The Quantastic Journal (Medium)  
-
-
-
+→ [Full research details and abstracts](./research.html)
 
 ---
 
 ## Experience
 
-**AI Engineer — DZap** (Sep 2024 – Present)  
-- Graph-based modeling of cross-chain token relationships  
-- Tool-using LLM interfaces for blockchain workflows
+**Research Assistant — Yeshiva University** · Dec 2025 – Present  
+Three concurrent faculty projects (see above).
 
-**ML Intern — ComputeLib** (Jun 2023 – Jul 2024)  
-- MVC gateway for microservices; improved performance and uptime  
-- Clean-architecture services (gRPC + REST)  
-- Flask LLM app with JWT/security; optimized response times  
-- Worked with Hugging Face/Open LLM stacks + vector DBs (FAISS/Chroma/Qdrant/Pinecone)
+**AI Engineer — DZap, Bangalore** · Sep 2024 – Dec 2024  
+Designed an inter-chain path-finding framework formulating cross-chain routing as sequential decision-making over dynamic gas costs and liquidity constraints — reducing gas costs by 27%. Built LLM-integrated blockchain agents enabling natural-language DeFi commands via multi-agent planning, cutting manual input time ~40%.
+
+**Machine Learning Intern — ComputeLib, Delhi** · Jun 2023 – May 2024  
+Developed gRPC/REST microservices, improving API latency from 2.1s to 0.6s (~3.5× speedup). Deployed Hugging Face + LangChain LLM backend serving ~25k requests/day. Containerized modules with Docker, improving uptime by 43%.
+
+---
+
+## Selected Highlights
+
+- 🏆 Best Research Award — YU CSE Day 2025
+- 📄 Featured in [YU News](https://www.yu.edu/news/katz/ieee-ai-student-present-new-model-how-money-moves-across-blockchains) for IEEE ICNC 2026 paper
+- 🚗 Top 0.80% globally — AWS DeepRacer Student Qualifier (19 / 2,362)
+- 🎓 AWS AI & ML Scholarship, L&T TS Scholarship (IIT Madras)
+- 🌍 Global Guide, One To World — 150+ international students mentored
+
+→ [Full awards and rankings](./achievements.html)
 
 ---
 
 ## Teaching & Service
 
-- Global Guide, One To World (150+ students)
-- Section Leader, Code in Place
-- Mentor, DevFest Hackathon (Columbia University)
-- Volunteer, Jersey City Marathon
-
----
-
-## Selected Projects
-
-- **Build Your Own Story** — interactive branching storytelling with LLM-generated prompts + images  
-- **Re-ID / Realness Index API** — face comparison API  
-- Additional work spans DeFi routing graphs, agentic systems, and data pipelines
+- **Global Guide, One To World** — mentored 150+ international students on academics and life in the US
+- **Section Leader, Code in Place** — Stanford's global introductory coding program
+- **Mentor, DevFest Hackathon** — Columbia University
+- **Volunteer** — Jersey City Marathon
 
 ---
 
 ## Skills
 
-**Languages:** Python, TypeScript/JavaScript, Java, C/C++, SQL  
-**ML/DS:** PyTorch/TensorFlow, scikit-learn, LangChain, vector databases  
-**Backend:** Flask, Express.js, REST APIs, microservices, JWT security  
-**Data:** PostgreSQL/MySQL, Firebase, embeddings + retrieval systems
+**Languages:** Python · C/C++ · TypeScript · Java · Kotlin · SQL  
+**ML / RL:** PyTorch · TensorFlow · Scikit-learn · OpenAI Gym · Stable-Baselines3 · PPO / DQN / SAC  
+**LLMs & Retrieval:** LangChain · FAISS · ChromaDB · Pinecone · Qdrant · Hugging Face  
+**Infrastructure:** Docker · FastAPI · Flask · Django · Express.js · JWT  
+**Databases & Graphs:** MySQL · Firebase · Neo4j · The Graph  
 
 ---
 
-## Contact
+## Writing
 
-- LinkedIn: https://www.linkedin.com/in/tirth5828/  
-- GitHub: https://github.com/tirth5828/
+I write about ML, quantum computing, and systems on Medium. Selected pieces:
+
+- [Traveling Salesman Problem Using Quantum Computing](https://medium.com/the-quantastic-journal/traveling-salesman-problem-using-quantum-computing-02ae6356544b) — *The Quantastic Journal*
+- [Quantum Machine Learning for ML Engineers](https://medium.com/@tirth5828/quantum-machine-learning-for-ml-engineers-63c99c887ddd)
+- [Integration of Quantum Computing with Classical Data Systems](https://medium.com/@tirth5828/integration-of-quantum-computing-with-classical-data-systems-a-practical-approach-e1bf23b0b025)
+
+---
+
+*I care about depth over breadth, systems over demos, and clarity over hype.*  
+*Favorite equation: the Riemann Hypothesis.*
+
+**tjoshi1@mail.yu.edu** · Jersey City, NJ

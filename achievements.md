@@ -2,63 +2,70 @@
 layout: default
 ---
 
-# Honors & Achievements
+<div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom:18px; font-size:0.95em;">
+  <a href="./">Home</a> ·
+  <a href="./research.html">Research</a> ·
+  <a href="./projects.html">Projects</a> ·
+  <a href="./pos.html">Statement of Purpose</a>
+</div>
 
-A selective summary of awards, competitive rankings, and recognitions across research, hackathons, and academics.
+# Honors & Achievements
 
 ---
 
 ## Research & Academic Recognition
 
-- **Best Research Award** — YU CSE Research Day (2025)  
-- **Invited Paper Acceptance: Hierarchical Graph Representation for Multi-Chain Blockchain Routing** — IEEE ICNC 2026 [PDF](http://www.conf-icnc.org/2026/papers/p921-joshi.pdf)  
-- **Research Poster Presentation** — DuckAI, Stevens Institute of Technology  
-- **ACM India Summer School (2024)** — Generative AI for Text  
+- 🏆 **Best Research Award** — YU CSE Day 2025 *(cross-linguistic phonetics & grammar ML study)*
+- 📄 **Invited Paper — IEEE ICNC 2026 Main Program** — *Hierarchical Graph Representation for Multi-Chain Blockchain Routing* · [PDF](http://www.conf-icnc.org/2026/papers/p921-joshi.pdf)
+- 🖼️ **Research Poster** — DuckAI, Stevens Institute of Technology
+- 🎓 **ACM India Summer School 2024** — Generative AI for Text *(competitive selection)*
 
 ---
 
-## Media / Press
+## Press & Media
 
-- [**At IEEE, AI Student to Present New Model for How Money Moves Across Blockchains**](https://www.yu.edu/news/katz/ieee-ai-student-present-new-model-how-money-moves-across-blockchains) — YU News
+- 📰 [**At IEEE, AI Student to Present New Model for How Money Moves Across Blockchains**](https://www.yu.edu/news/katz/ieee-ai-student-present-new-model-how-money-moves-across-blockchains) — *Yeshiva University News, January 2026*  
+  Featured story on the IEEE ICNC 2026 paper; one of very few master's students to receive a dedicated university news feature.
 
 ---
 
-## Hackathons & Competitive Programming
+## Hackathons
 
-**Wins & Podium Finishes**
-- **Winner (Runner-Up + Category)** — Hack This Fall ’24  
-- **Winner** — SSIP AKAM Hackathon, Gujarat  
-- **Category Winner** — Hack This Fall Hackathon (2023)
+**Wins & Podiums**
+- 🥇 **Winner (Runner-Up + Category)** — Hack This Fall '24
+- 🥇 **Winner** — SSIP AKAM Hackathon, Gujarat (Government of India)
+- 🥇 **Category Winner** — Hack This Fall '23
 
 **Finalist Positions**
-- **Top 10 + Consolation Prize** — IEEE-CIS Summer School Hackathon (MNIT Jaipur)  
-- **Top 25** — UHackathon 4.0 (UPES Dehradun)  
+- **Top 10 + Consolation Prize** — IEEE-CIS Summer School Hackathon, MNIT Jaipur
+- **Top 25** — UHackathon 4.0, UPES Dehradun
 - **Finalist** — Sigmoid Data Science Hackathon (Remote)
+- **Multiple Podiums** — HACK IIITV (Undergraduate & Open Categories)
 
 ---
 
-## AWS DeepRacer (Global Rankings)
+## AWS DeepRacer — Global Rankings
 
-Consistent top-tier performance in international competitions:
+Trained continuous-control RL agents for autonomous track racing in the AWS global competition.
 
-- **Top 0.80%** — July 2023 Student Qualifier (19 / 2362)  
-- **Top 4–8%** — Multiple qualifiers across 2023–2024  
-- **Semifinalist** — AWS DeepRacer Student League (2022)
+- 🌍 **Top 0.80% globally** — July 2023 Student Qualifier · **Ranked 19 out of 2,362 students**
+- **Top 4–8%** — Multiple qualifiers, 2023–2024
+- **Semifinalist** — AWS DeepRacer Student League 2022
 
 ---
 
-## Scholarships & Awards
+## Scholarships & Funding
 
-- **AWS AI & ML Scholarship** — Udacity  
-- **L&T TS Scholarship** — IIT Madras  
-- **Extra Mile Award** — Wiingy (for student mentorship and impact)
+- **AWS AI & ML Scholarship** — Udacity *(competitive, merit-based)*
+- **L&T TS Scholarship** — IIT Madras
+- **Extra Mile Award** — Wiingy *(for student mentorship impact)*
 
 ---
 
 ## University-Level Competitions
 
-- **3rd Place** — Mathematics Olympiad, IIT Madras  
-- **2nd Place** — Differential Bee 2.0, IIIT Vadodara  
+- **3rd Place** — Mathematics Olympiad, IIT Madras
+- **2nd Place** — Differential Bee 2.0, IIIT Vadodara
 - **Multiple Podium Finishes** — HACK IIITV (UG & Open Categories)
 
 ---
@@ -69,4 +76,4 @@ Consistent top-tier performance in international competitions:
 
 ---
 
-[← Back](./)
+[← Back to Home](./)
