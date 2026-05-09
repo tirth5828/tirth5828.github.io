@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tirth Joshi // AI Engineer &amp; Researcher</title>
+  <meta name="description" content="AI Engineer & Researcher | LLM Agents · RL · Graph ML · Blockchain Security | MS AI @ Yeshiva University | Open to full-time roles"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;900&family=VT323&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Ambient bg layers -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise"     aria-hidden="true"></div>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+  <div class="orb orb1"  aria-hidden="true"></div>
+  <div class="orb orb2"  aria-hidden="true"></div>
+  <div class="orb orb3"  aria-hidden="true"></div>
+
+  <!-- HP Easter egg -->
+  <div id="hp-overlay" class="hp-overlay" onclick="closeHP()"></div>
+  <div id="hp-modal"   class="hp-modal" aria-hidden="true">
+    <div class="hp-bar">
+      <span class="hd r"></span><span class="hd y"></span><span class="hd g"></span>
+      <span class="hp-title">hogwarts_terminal.sh — bash</span>
+    </div>
+    <div class="hp-body">
+      <p class="hl"><span class="hprompt">$ </span><span class="hcmd">cast --spell alohomora --verbose</span></p>
+      <p class="hl ho">&gt; Parsing incantation... <span class="hok">✓</span></p>
+      <p class="hl ho">&gt; Wizard clearance: <span class="hok">GRANTED</span></p>
+      <p class="hl ho">&gt; Chamber unlocked.</p>
+      <div class="hdivider"></div>
+      <div class="hcrest">⚡</div>
+      <p class="hspell">Alohomora!</p>
+      <p class="hquote">"It is our choices, Harry, that show what we truly are, far more than our abilities."</p>
+      <p class="hattr">— Albus Percival Wulfric Brian Dumbledore</p>
+      <div class="hhouses">
+        <button title="Gryffindor">🦁</button>
+        <button title="Hufflepuff">🦡</button>
+        <button title="Ravenclaw">🦅</button>
+        <button title="Slytherin">🐍</button>
+      </div>
+      <div id="houseMsg" class="house-msg"></div>
+      <div class="hdivider"></div>
+      <p class="hl"><span class="hprompt">$ </span><span class="hcmd">mischief --managed</span></p>
+      <p class="hl hp-hint">&gt; Hint: Konami ↑↑↓↓←→←→BA · type "lumos" · click ⚡ footer</p>
+      <button class="hp-x" onclick="closeHP()"><span class="hprompt">$ </span>exit</button>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cur-ring" id="curRing"></div>
+  <div class="cur-dot"  id="curDot"></div>
+
+  <!-- ══ NAV ═══════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="nb">[</span><span class="ni">TJ</span><span class="nb">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about"><em>01.</em>about</a></li>
+      <li><a href="#build"><em>02.</em>i_build</a></li>
+      <li><a href="#research"><em>03.</em>research</a></li>
+      <li><a href="#experience"><em>04.</em>experience</a></li>
+      <li><a href="#publications"><em>05.</em>papers</a></li>
+      <li><a href="#projects"><em>06.</em>projects</a></li>
+      <li><a href="#contact"><em>07.</em>contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="mailto:tirth5828@gmail.com" class="nav-hire">// hire_me()</a>
+      <button class="hamburger" id="menuBtn" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about"        onclick="closeMM()"><em>01.</em> about</a></li>
+      <li><a href="#build"        onclick="closeMM()"><em>02.</em> i_build</a></li>
+      <li><a href="#research"     onclick="closeMM()"><em>03.</em> research</a></li>
+      <li><a href="#experience"   onclick="closeMM()"><em>04.</em> experience</a></li>
+      <li><a href="#publications" onclick="closeMM()"><em>05.</em> papers</a></li>
+      <li><a href="#projects"     onclick="closeMM()"><em>06.</em> projects</a></li>
+      <li><a href="#contact"      onclick="closeMM()"><em>07.</em> contact</a></li>
+    </ul>
+    <a href="mailto:tirth5828@gmail.com" class="mm-hire">// hire_me()</a>
+  </div>
+
+  <main>
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-l">
+
+      <div class="hero-open reveal">
+        <span class="open-pip"></span>
+        <span class="open-text">OPEN TO WORK · AI Engineer · ML Engineer · Applied Scientist</span>
+      </div>
+
+      <div class="hero-status reveal">
+        <span class="status-pip"></span>
+        <span>// jersey_city:NJ · ms_ai@yeshiva · graduating Dec 2026</span>
+      </div>
+
+      <div class="hero-name-wrap reveal">
+        <h1 class="hero-name">
+          <span class="glitch" data-text="TIRTH">TIRTH</span><br>
+          <span class="glitch" data-text="JOSHI.">JOSHI.</span>
+        </h1>
+      </div>
+
+      <!-- Dual identity badges -->
+      <div class="dual-id reveal">
+        <div class="did-card research-id">
+          <div class="did-label">// researcher</div>
+          <div class="did-val">5 papers · 4 advisors · IEEE ICNC · ACM · NeurIPS · ECCV</div>
+        </div>
+        <div class="did-sep">+</div>
+        <div class="did-card engineer-id">
+          <div class="did-label">// engineer</div>
+          <div class="did-val">LLM · RL · Graph ML · Blockchain · Production systems</div>
+        </div>
+      </div>
+
+      <div class="hero-type reveal">
+        <span class="typed" id="typedText"></span><span class="tcaret">█</span>
+      </div>
+
+      <div class="hero-meta reveal">
+        <div class="hm"><span class="hk">role </span><span class="hs">::=</span><span class="hv">AI_Engineer &amp;&amp; Researcher</span></div>
+        <div class="hm"><span class="hk">edu  </span><span class="hs">::=</span><span class="hv">MS_AI @ Yeshiva · GPA <span class="hg">4.0/4.0</span></span></div>
+        <div class="hm"><span class="hk">papers</span><span class="hs">::=</span><span class="hv">5 papers + 1 abstract accepted [IEEE·ACM·NeurIPS·ECCV]</span></div>
+        <div class="hm"><span class="hk">stack</span><span class="hs">::=</span><span class="hv">Python · PyTorch · LangChain · Docker · gRPC · Neo4j</span></div>
+        <div class="hm"><span class="hk">avail</span><span class="hs">::=</span><span class="hv hg">immediately · full-time · US authorized</span></div>
+      </div>
+
+      <div class="hero-btns reveal">
+        <a href="#build"  class="btn-p">&gt; what_i_build()</a>
+        <a href="#research" class="btn-g">$ my_research()</a>
+        <a href="mailto:tirth5828@gmail.com" class="btn-hire">⚡ hire_me()</a>
+      </div>
+    </div>
+
+    <div class="hero-r reveal">
+      <canvas id="nodeGraph"></canvas>
+      <div class="graph-lbl">// knowledge_graph.animate()</div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>scroll</span><div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══════════════════════════════════════════════ -->
+  <section class="sec" id="about">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">01</span><span class="ss">//</span><span class="st">about.md</span></div>
+
+      <div class="about-grid">
+        <div class="term-card reveal" id="secretCard">
+          <div class="term-bar">
+            <span class="td r"></span><span class="td y"></span><span class="td g"></span>
+            <span class="t-title">tirth@yu:~$ cat bio.txt</span>
+          </div>
+          <div class="term-body">
+            <p><span class="cc">/* the core question */</span></p>
+            <p class="cs">"How do we build AI systems that reason, adapt,</p>
+            <p class="cs"> and stay reliable in complex real-world settings?"</p>
+            <br>
+            <p><span class="ck">depth   </span><span class="cop">&gt;</span><span class="cv"> breadth</span></p>
+            <p><span class="ck">systems </span><span class="cop">&gt;</span><span class="cv"> demos</span></p>
+            <p><span class="ck">clarity </span><span class="cop">&gt;</span><span class="cv"> hype</span></p>
+            <br>
+            <p><span class="cc">// research streams [active]</span></p>
+            <p>├─ LLM security · smart contract vuln detection</p>
+            <p>├─ Multi-agent RL · heterogeneous IoT/robotics</p>
+            <p>├─ Compositional privacy risk · re-identification</p>
+            <p>└─ Topology-based gradient descent optimization</p>
+            <br>
+            <p><span class="cc">// also selected for RLSS 2025</span></p>
+            <p>$ rl_summer_school = "accepted · rlsummerschool.com"</p>
+            <p class="cc">  # (couldn't attend · financial/personal reasons)</p>
+            <br>
+            <p><span class="cc">// fun_facts.sh</span></p>
+            <p>$ eq_of_life    = "riemann_hypothesis"</p>
+            <p>$ hobbies       = [math, poetry, food, finding_good_restaurants]</p>
+            <p>$ languages     = [English, Gujarati, Hindi]</p>
+            <p class="easter-hint">$ <span class="cg">// 🔍 secrets hidden on this page...</span></p>
+          </div>
+        </div>
+
+        <div class="about-r">
+          <div class="stat-grid reveal">
+            <div class="stat-c">
+              <div class="sn2" data-target="6">0</div>
+              <div class="sl">papers &amp; abstracts</div>
+            </div>
+            <div class="stat-c">
+              <div class="sn2" data-target="4">0</div>
+              <div class="sl">research advisors</div>
+            </div>
+            <div class="stat-c">
+              <div class="sn2" data-target="67">0</div>
+              <div class="sl">github repos</div>
+            </div>
+            <div class="stat-c">
+              <div class="sn2" data-target="4.0" data-float="true">0.0</div>
+              <div class="sl">GPA / 4.0</div>
+            </div>
+          </div>
+
+          <div class="tag-block reveal">
+            <div class="tb-h">// currently_seeking[]</div>
+            <div class="tag-row">
+              <span class="tag-hire">AI Engineer</span>
+              <span class="tag-hire">ML Engineer</span>
+              <span class="tag-hire">Applied Scientist</span>
+              <span class="tag-hire">Research Engineer</span>
+              <span class="tag-hire">LLM Engineer</span>
+            </div>
+          </div>
+
+          <div class="tag-block reveal">
+            <div class="tb-h">// research_interests[]</div>
+            <div class="tag-row">
+              <span>LLM_Security</span><span>MARL</span><span>Privacy_Theory</span>
+              <span>Graph_ML</span><span>Topology_AI</span><span>DeFi_Mechanisms</span>
+              <span>Blockchain_Sec</span><span>IoT_Robotics</span><span>Quantum_ML</span>
+            </div>
+          </div>
+
+          <div class="cert-block reveal">
+            <div class="tb-h">// recognition[]</div>
+            <div class="cert-list">
+              <span>★ Best Research Award — YU CSE Day 2025</span>
+              <span>◈ IEEE ICNC 2026 — Invited Paper (Main Program)</span>
+              <span>▲ Top 0.80% AWS DeepRacer (Rank 19/2,362)</span>
+              <span>✓ Selected — RL Summer School 2025</span>
+              <span>◉ YU Symposium 2025 — Upcoming Speaker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WHAT I BUILD (Engineering Focus) ══════════════════ -->
+  <section class="sec s-alt" id="build">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">02</span><span class="ss">//</span><span class="st">what_i_build.sh</span></div>
+      <h2 class="sec-h reveal"><span class="cmt">/* </span>pragmatic AI engineering<span class="cmt"> */</span></h2>
+      <p class="sec-sub reveal">I ship production systems. Research depth + engineering pragmatism — not demos, real deployed systems.</p>
+
+      <div class="build-grid">
+
+        <div class="build-card reveal">
+          <div class="bc-icon">⚙</div>
+          <h3>LLM Systems &amp; Agents</h3>
+          <p>End-to-end LLM application development — RAG pipelines, tool-using agents, multi-step planners, structured output, evaluation frameworks. LangChain / LangGraph / custom orchestration.</p>
+          <div class="bc-tech"><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>HuggingFace</span><span>OpenAI</span></div>
+          <div class="bc-proof">
+            <div class="bc-proof-label">// shipped:</div>
+            <span>Cross-chain DeFi agent · NL interface cutting manual input 40%</span>
+          </div>
+        </div>
+
+        <div class="build-card reveal">
+          <div class="bc-icon">🧠</div>
+          <h3>Reinforcement Learning</h3>
+          <p>Policy training (PPO/DQN/SAC), reward engineering, multi-agent systems, online adaptation. From simulation to hardware — OpenAI Gym, Stable-Baselines3, custom environments.</p>
+          <div class="bc-tech"><span>PyTorch</span><span>PPO</span><span>DQN</span><span>SAC</span><span>OpenAI_Gym</span></div>
+          <div class="bc-proof">
+            <div class="bc-proof-label">// shipped:</div>
+            <span>DeepRacer PPO agent · Top 0.80% global · Multi-agent IoT coordination</span>
+          </div>
+        </div>
+
+        <div class="build-card reveal">
+          <div class="bc-icon">🕸</div>
+          <h3>Graph ML &amp; Reasoning</h3>
+          <p>Graph Neural Networks, knowledge graphs, Neo4j, hierarchical graph representations, pathfinding over complex networked systems. Graph-as-reasoning-substrate.</p>
+          <div class="bc-tech"><span>Neo4j</span><span>GNN</span><span>The_Graph</span><span>NetworkX</span><span>PyG</span></div>
+          <div class="bc-proof">
+            <div class="bc-proof-label">// shipped:</div>
+            <span>IEEE ICNC 2026 — GHP algorithm · 8× faster cross-chain routing</span>
+          </div>
+        </div>
+
+        <div class="build-card reveal">
+          <div class="bc-icon">🔐</div>
+          <h3>ML Security &amp; Privacy</h3>
+          <p>Adversarial ML, smart contract vulnerability detection, re-identification risk quantification, privacy-preserving systems. Building AI that stays safe when attacked.</p>
+          <div class="bc-tech"><span>Solidity</span><span>Privacy_Metrics</span><span>Red_Teaming</span><span>GDPR</span></div>
+          <div class="bc-proof">
+            <div class="bc-proof-label">// research:</div>
+            <span>RPI metric · ECCV · APF · ACM FAccT submissions</span>
+          </div>
+        </div>
+
+        <div class="build-card reveal">
+          <div class="bc-icon">⚡</div>
+          <h3>Production ML Infrastructure</h3>
+          <p>Microservices, gRPC/REST APIs, Docker, vector databases, CI/CD, load balancing. Taking ML models from notebook to production at scale.</p>
+          <div class="bc-tech"><span>FastAPI</span><span>Docker</span><span>gRPC</span><span>FAISS</span><span>Pinecone</span></div>
+          <div class="bc-proof">
+            <div class="bc-proof-label">// shipped:</div>
+            <span>25k req/day LLM backend · API latency 2.1s → 0.6s · 43% uptime ↑</span>
+          </div>
+        </div>
+
+        <div class="build-card reveal">
+          <div class="bc-icon">⛓</div>
+          <h3>Blockchain &amp; DeFi AI</h3>
+          <p>Cross-chain intelligence, LLM-integrated DeFi automation, smart contract security tooling, on-chain AI agents. Intent-based interfaces for complex decentralized systems.</p>
+          <div class="bc-tech"><span>LI.FI</span><span>Circle</span><span>LayerZero</span><span>Ocean</span><span>The_Graph</span></div>
+          <div class="bc-proof">
+            <div class="bc-proof-label">// shipped:</div>
+            <span>Synapse @ ETHGlobal NYC · 27% gas savings · NL DeFi commands</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Metrics strip -->
+      <div class="metrics-strip reveal">
+        <div class="ms-item">
+          <div class="ms-val">27%</div><div class="ms-label">gas cost reduction · DZap</div>
+        </div>
+        <div class="ms-div"></div>
+        <div class="ms-item">
+          <div class="ms-val">3.5×</div><div class="ms-label">API speed · ComputeLib</div>
+        </div>
+        <div class="ms-div"></div>
+        <div class="ms-item">
+          <div class="ms-val">8×</div><div class="ms-label">routing speed · IEEE paper</div>
+        </div>
+        <div class="ms-div"></div>
+        <div class="ms-item">
+          <div class="ms-val">43%</div><div class="ms-label">uptime improvement</div>
+        </div>
+        <div class="ms-div"></div>
+        <div class="ms-item">
+          <div class="ms-val">~40%</div><div class="ms-label">manual input reduction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ RESEARCH ══════════════════════════════════════════ -->
+  <section class="sec" id="research">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">03</span><span class="ss">//</span><span class="st">research.active</span></div>
+      <h2 class="sec-h reveal"><span class="cmt">/* </span>four concurrent research directions<span class="cmt"> */</span></h2>
+
+      <!-- Upcoming talk callout -->
+      <div class="talk-callout reveal">
+        <div class="tc-badge">📢 UPCOMING TALK</div>
+        <div class="tc-body">
+          <div class="tc-title">"When 'Anonymous' Data Stops Being Anonymous: Measuring How Public Data Accumulates into Re-Identification Risk"</div>
+          <div class="tc-venue">YU Symposium 2025 · Yeshiva University</div>
+        </div>
+      </div>
+
+      <div class="talk-callout reveal">
+        <div class="tc-badge">📢 UPCOMING TALK</div>
+        <div class="tc-body">
+          <div class="tc-title">"Morse-Seeded Coresets for Structure-Preserving Landmarking on kNN Graphs"</div>
+          <div class="tc-venue">Network Science Informs AI (NSIA) · NetSci 2026 </div>
+        </div>
+      </div>
+
+
+      <div class="r-grid">
+
+        <div class="r-card reveal">
+          <div class="ri">[ 01 ]</div>
+          <div class="ra">Prof. Shucheng Yu · Yeshiva University</div>
+          <h3>LLM Security &amp; Smart Contract Vulnerability Detection</h3>
+          <p>RL-based synthetic dataset generator for adversarial Solidity contracts targeting underrepresented vulnerability classes — including zero-day patterns. LLM detection framework with RL-style feedback loops iteratively refining policies from sparse execution signals.</p>
+          <div class="rtags"><span>LLMs</span><span>RL</span><span>Solidity</span><span>Adversarial_ML</span><span>Zero-Day</span></div>
+          <div class="rc-tl"></div><div class="rc-br"></div>
+        </div>
+
+        <div class="r-card reveal">
+          <div class="ri">[ 02 ]</div>
+          <div class="ra">Prof. Honggang Wang · AIM Lab · IEEE Fellow</div>
+          <h3>Multi-Agent RL for Heterogeneous IoT &amp; Robotics</h3>
+          <p>RL-based coordination for heterogeneous IoT — jointly training a humanoid robot and RC vehicle across vision, audio, and motion modalities. Partial observability, inter-agent communication, real-time sensor fusion constraints.</p>
+          <div class="rtags"><span>MARL</span><span>PPO</span><span>Sensor_Fusion</span><span>Robotics</span><span>IoT</span></div>
+          <div class="rc-tl"></div><div class="rc-br"></div>
+        </div>
+
+        <div class="r-card reveal">
+          <div class="ri">[ 03 ]</div>
+          <div class="ra">Prof. Aaron Ross · Yeshiva University</div>
+          <h3>Compositional Privacy Risk &amp; Re-Identification Theory</h3>
+          <p>Re-Identification Pressure Index (RPI) — quantifying anonymity erosion through cumulative data releases and cross-linkages using entropy and collision probability. Multiple submissions to ACM FAccT, ECCV, APF, NeurIPS.</p>
+          <div class="rtags"><span>Privacy</span><span>Info_Theory</span><span>RPI</span><span>GDPR</span><span>FAccT</span></div>
+          <div class="rc-tl"></div><div class="rc-br"></div>
+        </div>
+
+        <div class="r-card reveal">
+          <div class="ri">[ 04 ]</div>
+          <div class="ra">Prof. Marian Gidea · Yeshiva University</div>
+          <h3>Topology-Based Optimization of Gradient Descent Initialization</h3>
+          <p>Applying topological data analysis (TDA) and Morse theory to improve gradient descent initialization strategies. Using structural properties of loss landscapes — coresets, persistent homology — to inform smarter, structure-preserving starting points for optimization.</p>
+          <div class="rtags"><span>TDA</span><span>Morse_Theory</span><span>Optimization</span><span>Topology</span><span>GD</span></div>
+          <div class="rc-tl"></div><div class="rc-br"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ════════════════════════════════════════ -->
+  <section class="sec s-alt" id="experience">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">04</span><span class="ss">//</span><span class="st">git log --experience</span></div>
+      <h2 class="sec-h reveal">Work history<span class="bc2">_</span></h2>
+
+      <div class="tl">
+
+        <div class="tli reveal">
+          <div class="tll">
+            <div class="tln active"></div>
+            <div class="tlbar"></div>
+          </div>
+          <div class="tlr">
+            <div class="tl-period">Jan 2026 <span class="arr">→</span> present <span class="active-b">● active</span></div>
+            <div class="tl-org">Yeshiva University — Katz School of Science &amp; Health · New York</div>
+            <div class="tl-role">// Research Assistant (×4 concurrent advisors)</div>
+            <p class="tl-p">Four parallel research streams under Profs. Shucheng Yu, Honggang Wang, Aaron Ross, and Marian Gidea spanning LLM security, IoT multi-agent RL, compositional privacy theory, and topology-based optimization.</p>
+          </div>
+        </div>
+
+        <div class="tli reveal">
+          <div class="tll"><div class="tln"></div><div class="tlbar"></div></div>
+          <div class="tlr">
+            <div class="tl-period">Sep 2024 <span class="arr">→</span> Dec 2024</div>
+            <div class="tl-org">DZap · Bangalore</div>
+            <div class="tl-role">// AI Engineer</div>
+            <p class="tl-p">Designed inter-chain path-finding framework — cross-chain routing as sequential decision-making over dynamic gas costs and liquidity constraints. Built LLM-integrated blockchain agents for natural-language DeFi commands via multi-agent planning.</p>
+            <div class="tl-metrics">
+              <span><strong>27%</strong> gas cost ↓</span>
+              <span><strong>~40%</strong> manual input ↓</span>
+            </div>
+            <div class="tl-tags"><span>Graph_ML</span><span>LLM_Agents</span><span>DeFi</span><span>Multi-Agent</span><span>Blockchain</span></div>
+          </div>
+        </div>
+
+        <div class="tli reveal">
+          <div class="tll"><div class="tln"></div><div class="tlbar"></div></div>
+          <div class="tlr">
+            <div class="tl-period">Jun 2023 <span class="arr">→</span> May 2024</div>
+            <div class="tl-org">ComputeLib · Delhi</div>
+            <div class="tl-role">// Machine Learning Intern</div>
+            <p class="tl-p">gRPC/REST microservices, Hugging Face + LangChain LLM backend (~25k req/day), Docker containerization and load-balancing. Brought API latency from 2.1s to 0.6s.</p>
+            <div class="tl-metrics">
+              <span><strong>3.5×</strong> API speedup</span>
+              <span><strong>43%</strong> uptime ↑</span>
+              <span><strong>25k</strong> req/day LLM</span>
+            </div>
+            <div class="tl-tags"><span>LangChain</span><span>Docker</span><span>gRPC</span><span>Vector_DBs</span><span>Microservices</span></div>
+          </div>
+        </div>
+
+        <div class="tli reveal">
+          <div class="tll"><div class="tln"></div><div class="tlbar"></div></div>
+          <div class="tlr">
+            <div class="tl-period">Apr 2023 <span class="arr">→</span> Dec 2023</div>
+            <div class="tl-org">Skiome · Gandhinagar</div>
+            <div class="tl-role">// Co-Founder &amp; CTO</div>
+            <p class="tl-p">Co-founded a Startup India-recognized venture; led product architecture, web development, and technical execution across a small founding team.</p>
+            <div class="tl-metrics">
+              <span><strong>37%</strong> time-to-action ↓</span>
+            </div>
+            <div class="tl-tags"><span>LangChain</span><span>Docker</span><span>gRPC</span><span>Business</span><span>Startup</span></div>
+
+          </div>
+        </div>
+
+
+        <div class="tli reveal">
+          <div class="tll"><div class="tln"></div><div class="tlbar"></div></div>
+          <div class="tlr">
+            <div class="tl-period">Jul 2022 <span class="arr">→</span> May 2024</div>
+            <div class="tl-org">IIIT Vadodara</div>
+            <div class="tl-role">// Research &amp; Teaching Assistant</div>
+            <p class="tl-p">Research under Dr. Jignesh S. Bhatt on cognitive systems with generative networks and stochastic modeling. TA for ML, Probability &amp; Statistics, and Introduction to Programming.</p>
+          </div>
+        </div>
+
+        <div class="tli reveal">
+          <div class="tll"><div class="tln"></div><div class="tlbar"></div></div>
+          <div class="tlr">
+            <div class="tl-period">Feb 2023 <span class="arr">→</span> Mar 2023</div>
+            <div class="tl-org">Ministry of Education, Government of India</div>
+            <div class="tl-role">// Technical Intern (Android)</div>
+            <p class="tl-p">Cultural preservation — archiving oral Gujarati lullabies. Firebase: −23% data exchange, −12% per-session download.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PUBLICATIONS ══════════════════════════════════════ -->
+  <section class="sec" id="publications">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">05</span><span class="ss">//</span><span class="st">publications.bib</span></div>
+      <h2 class="sec-h reveal">Research output<span class="bc2">_</span></h2>
+
+      <!-- Upcoming YU talk banner -->
+      <div class="talk-mini reveal">
+        <span class="talk-icon">🎤</span>
+        <div>
+          <strong>Upcoming Presentation · YU Symposium 2025</strong>
+          <span> — "When 'Anonymous' Data Stops Being Anonymous: Measuring How Public Data Accumulates into Re-Identification Risk"</span>
+        </div>
+      </div>
+
+      <div class="talk-mini reveal">
+        <span class="talk-icon">🎤</span>
+        <div>
+          <strong>Upcoming Poster · Network Science Informs AI (NSIA) 2026</strong>
+          <span> — "Morse-Seeded Coresets for Structure-Preserving Landmarking on kNN Graphs"</span>
+        </div>
+      </div>
+
+      <div class="pub-list">
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-acc">✓ ACCEPTED</span>
+            <span class="ba-v">IEEE ICNC 2026</span>
+          </div>
+          <h3>Hierarchical Graph Representation for Multi-Chain Blockchain Routing</h3>
+          <p class="pauth">Tirth Joshi, Honggang Wang</p>
+          <p>Proposes hierarchical AND/OR graph for multi-chain ecosystems. GHP algorithm: <strong>8× faster</strong> than traditional approaches within ~5% of optimal across tens of thousands of tokens and dozens of chains. Featured in YU official news.</p>
+          <div class="pfooter">
+            <span class="pconf">IEEE ICNC 2026 · Maui, HI · Feb 2026 · ISBN 979-8-3315-7111-5</span>
+            <a href="https://dblp.org/db/conf/iccnc/icnc2026.html" target="_blank" rel="noopener" class="plink">dblp ↗</a>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-abs">◆ ABSTRACT ACCEPTED</span>
+            <span class="ba-v">NetSci 2025 · NSIA Satellite</span>
+          </div>
+          <h3>Morse-Seeded Coresets for Structure-Preserving Landmarking on kNN Graphs</h3>
+          <p class="pauth">Tirth Joshi</p>
+          <p>Abstract accepted at NSIA — a satellite event of NetSci 2025 (Network Science). Introduces Morse-theory-seeded coreset construction for structure-preserving landmark selection on k-nearest-neighbor graphs, preserving topological features under dimensionality reduction.</p>
+          <div class="pfooter">
+            <span class="pconf">NSIA Satellite @ NetSci 2025 · Network Science</span>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-rev">◎ UNDER REVIEW</span>
+            <span class="ba-v">ECCV</span>
+          </div>
+          <h3>Compositional Non-Face Re-Identification Pressure under Cumulative Vision Releases</h3>
+          <p class="pauth">Tirth Joshi et al.</p>
+          <p>Measures cumulative re-identification risk as vision datasets and models accumulate combined signals over time — even without explicit face identifiers. Formalizes how non-face visual cues compose into re-id pressure.</p>
+          <div class="pfooter">
+            <span class="pconf">European Conference on Computer Vision (ECCV)</span>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-rev">◎ UNDER REVIEW</span>
+            <span class="ba-v">NeurIPS</span>
+          </div>
+          <h3>On the Limits of Semantic Reconstruction Through Text: A Bottleneck Theory with Structured Scene-Level Distortion</h3>
+          <p class="pauth">Tirth Joshi et al.</p>
+          <p>Formalizes fundamental limits of semantic reconstruction from text using information-bottleneck theory, introducing structured scene-level distortion measures that bound what can be recovered from natural language descriptions alone.</p>
+          <div class="pfooter">
+            <span class="pconf">Neural Information Processing Systems (NeurIPS)</span>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-rev">◎ UNDER REVIEW</span>
+            <span class="ba-v">ACM FAccT</span>
+          </div>
+          <h3>Measuring the Statistical Erosion of Anonymity: A Historical Analysis of Re-Identification Potential</h3>
+          <p class="pauth">Tirth Joshi, Aaron Ross</p>
+          <p>Introduces the Re-Identification Pressure Index (RPI) — quantifying how cumulative data releases and cross-linkages erode anonymity over time using entropy and collision probability.</p>
+          <div class="pfooter">
+            <span class="pconf">ACM Conference on Fairness, Accountability, and Transparency</span>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-rev">◎ UNDER REVIEW</span>
+            <span class="ba-v">APF</span>
+          </div>
+          <h3>Re-Identification Pressure under GDPR: Measuring Cumulative Identifiability in Data Ecosystems</h3>
+          <p class="pauth">Tirth Joshi et al.</p>
+          <p>Applies re-identification pressure framework to GDPR-governed data ecosystems, measuring how compliant releases can cumulatively erode privacy guarantees across data subjects and time horizons.</p>
+          <div class="pfooter">
+            <span class="pconf">Annual Privacy Forum (APF)</span>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-soon">⟳ TO BE SUBMITTED</span>
+            <span class="ba-v">AFT</span>
+          </div>
+          <h3>Soft-Landing Liquidations for Overcollateralized Lending</h3>
+          <p class="pauth">Tirth Joshi et al.</p>
+          <p>SLLA replaces hard liquidations with smooth tranche-based auctions modeled as constrained sequential control — cutting bad debt by <strong>~45%</strong>. Targeting ACM Advances in Financial Technologies (AFT).</p>
+          <div class="pfooter">
+            <span class="pconf">ACM Advances in Financial Technologies (AFT) — submission in preparation</span>
+          </div>
+        </div>
+
+        <div class="pi reveal">
+          <div class="pbadges">
+            <span class="ba-award">★ BEST RESEARCH AWARD</span>
+            <span class="ba-v">YU CSE Day + DuckAI 2025</span>
+          </div>
+          <h3>Do Phonetic Patterns Predict Grammatical Structure?</h3>
+          <p class="pauth">Tirth Joshi</p>
+          <p>Cross-linguistic ML study using IPA-converted Bible corpora. Pipeline: IPA conversion → typological labeling → leave-one-language-out (LOLO) evaluation. Best Research Award at YU CSE Research Day Fall 2025. Poster at DuckAI 2025 @ Stevens Institute of Technology.</p>
+          <div class="pfooter">
+            <span class="pconf">YU CSE Day 2025 · DuckAI 2025 @ Stevens Institute of Technology</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══════════════════════════════════════════ -->
+  <section class="sec s-alt" id="projects">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">06</span><span class="ss">//</span><span class="st">ls -la ./projects/</span></div>
+      <h2 class="sec-h reveal">Things I've built<span class="bc2">_</span></h2>
+
+      <div class="proj-grid">
+
+        <div class="proj-card reveal">
+          <div class="pc-top">
+            <span class="pc-type">⛓ hackathon</span>
+            <div class="pc-links">
+              <a href="https://ethglobal.com/showcase/synapse-fp8fx" target="_blank" rel="noopener">demo ↗</a>
+              <a href="https://github.com/tirth5828/ETH-Global-NYC" target="_blank" rel="noopener">src ↗</a>
+            </div>
+          </div>
+          <h3>Synapse</h3>
+          <p class="pc-ev">ETHGlobal NYC 2025</p>
+          <p>"Google Maps for token flows." Cross-chain investment co-pilot: Ocean Protocol + Neo4j + The Graph + ASI-1 Mini LLM + MeTTa logic. Risk guardrails: slippage caps, protocol allowlists, position limits.</p>
+          <div class="pc-tags"><span>LangGraph</span><span>Neo4j</span><span>The_Graph</span><span>Ocean</span><span>LI.FI</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="pc-top">
+            <span class="pc-type">🏎 competition</span>
+            <div class="pc-links"><a href="https://github.com/tirth5828" target="_blank" rel="noopener">src ↗</a></div>
+          </div>
+          <h3>Autonomous Racing Agent</h3>
+          <p class="pc-ev">AWS DeepRacer — Rank 19/2,362 · Top 0.80% Globally · Semi-Finalist</p>
+          <p>Continuous-control PPO agent with engineered reward functions combining speed, steering smoothness, and track-center deviation. AWS AI &amp; ML Scholarship awarded.</p>
+          <div class="pc-tags"><span>PPO</span><span>Reward_Engineering</span><span>AWS</span><span>RL</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="pc-top">
+            <span class="pc-type">🎮 rl-research</span>
+            <div class="pc-links"><a href="https://github.com/tirth5828" target="_blank" rel="noopener">src ↗</a></div>
+          </div>
+          <h3>Adaptive Game Agent</h3>
+          <p class="pc-ev">Real-Time Opponent Modelling</p>
+          <p>Game agent learning opponent behaviour via online RL, adapting policy dynamically without resets — demonstrating non-stationary policy adaptation under distribution shift.</p>
+          <div class="pc-tags"><span>Online_RL</span><span>Non-Stationary</span><span>Policy_Adapt</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="pc-top">
+            <span class="pc-type">🏛 open-source</span>
+            <div class="pc-links">
+              <a href="https://github.com/tirth5828/Political-Bonds-RAG" target="_blank" rel="noopener">src ↗</a>
+            </div>
+          </div>
+          <h3>Political Bonds RAG</h3>
+          <p class="pc-ev">Indian Electoral Bonds Transparency Tool</p>
+          <p>RAG-based NL query interface over India's Electoral Bonds disclosure data (released post-SC ruling 2024). Making opaque public data actually queryable.</p>
+          <div class="pc-tags"><span>RAG</span><span>LLM</span><span>Vector_DB</span><span>Python</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="pc-top">
+            <span class="pc-type">📖 llm-app</span>
+            <div class="pc-links"><a href="https://tirth5828.github.io" target="_blank" rel="noopener">demo ↗</a></div>
+          </div>
+          <h3>Build Your Own Story</h3>
+          <p class="pc-ev">Interactive Branching LLM Narrative</p>
+          <p>Branching storytelling with LLM-generated prompts and AI-generated images. Each choice forks the narrative — no pre-written paths. Fully dynamic generation.</p>
+          <div class="pc-tags"><span>LLM</span><span>GenAI</span><span>Interactive</span></div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="pc-top"><span class="pc-type">🎵 civic-tech</span></div>
+          <h3>Gujarati Lullaby Archive</h3>
+          <p class="pc-ev">Ministry of Education, Govt. of India · 2023</p>
+          <p>Android app for cultural preservation of oral Gujarati lullabies. Firebase: −23% data exchange, −12% per-session download. Code as cultural preservation.</p>
+          <div class="pc-tags"><span>Android</span><span>Firebase</span><span>Java</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ════════════════════════════════════════════ -->
+  <section class="sec" id="skills">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">07</span><span class="ss">//</span><span class="st">package.json</span></div>
+      <h2 class="sec-h reveal">Technical stack<span class="bc2">_</span></h2>
+      <div class="skills-grid">
+        <div class="sg reveal"><div class="sg-h">// rl_ml_frameworks</div>
+          <div class="sg-c"><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>OpenAI_Gym</span><span>Stable-Baselines3</span><span>PPO</span><span>DQN</span><span>SAC</span><span>Keras</span><span>MLflow</span></div></div>
+        <div class="sg reveal"><div class="sg-h">// llms_retrieval</div>
+          <div class="sg-c"><span>LangChain</span><span>LangGraph</span><span>HuggingFace</span><span>FAISS</span><span>ChromaDB</span><span>Pinecone</span><span>Qdrant</span><span>OpenAI_API</span></div></div>
+        <div class="sg reveal"><div class="sg-h">// backend_infra</div>
+          <div class="sg-c"><span>FastAPI</span><span>Flask</span><span>Django</span><span>Docker</span><span>gRPC</span><span>REST</span><span>Nginx</span><span>JWT</span><span>Microservices</span></div></div>
+        <div class="sg reveal"><div class="sg-h">// databases_graphs</div>
+          <div class="sg-c"><span>Neo4j</span><span>The_Graph</span><span>MySQL</span><span>MongoDB</span><span>Firebase</span><span>CockroachDB</span><span>FAISS</span></div></div>
+        <div class="sg reveal"><div class="sg-h">// web3_defi</div>
+          <div class="sg-c"><span>Solidity</span><span>LI.FI</span><span>LayerZero</span><span>Circle_Wallets</span><span>Ocean_Protocol</span><span>ASI-1_Mini</span><span>MeTTa</span></div></div>
+        <div class="sg reveal"><div class="sg-h">// languages</div>
+          <div class="sg-c"><span>Python</span><span>C/C++</span><span>TypeScript</span><span>Java</span><span>Kotlin</span><span>SQL</span><span>R</span><span>C#</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WRITING ═══════════════════════════════════════════ -->
+  <section class="sec s-alt" id="writing">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">08</span><span class="ss">//</span><span class="st">cat writing/*.md</span></div>
+      <h2 class="sec-h reveal">Quantum ML series · Medium<span class="bc2">_</span></h2>
+      <div class="w-list">
+        <a class="wi reveal" href="https://medium.com/@tirth5828/quantum-machine-learning-for-ml-engineers-63c99c887ddd" target="_blank" rel="noopener">
+          <div class="win">01</div>
+          <div class="wib"><div class="wid">// Jul 04, 2024</div><h3>Quantum Machine Learning for ML Engineers</h3><p>Foundational primer on QML for engineers familiar with classical techniques.</p></div>
+          <div class="wia">→</div>
+        </a>
+        <a class="wi reveal" href="https://medium.com/@tirth5828/basics-of-quantum-computing-for-qml-part-2-a6d7da544d1d" target="_blank" rel="noopener">
+          <div class="win">02</div>
+          <div class="wib"><div class="wid">// Jul 18, 2024</div><h3>Basics of Quantum Computing for QML — Part 2</h3><p>Multi-qubit gates, error correction, models of quantum computing.</p></div>
+          <div class="wia">→</div>
+        </a>
+        <a class="wi reveal" href="https://medium.com/the-quantastic-journal/traveling-salesman-problem-using-quantum-computing-02ae6356544b" target="_blank" rel="noopener">
+          <div class="win">03</div>
+          <div class="wib"><div class="wid">// Jul 28, 2024</div><h3>Traveling Salesman Problem Using Quantum Computing</h3><p>Quantum approaches to TSP vs classical algorithms.</p></div>
+          <div class="wia">→</div>
+        </a>
+        <a class="wi reveal" href="https://medium.com/@tirth5828" target="_blank" rel="noopener">
+          <div class="win">04</div>
+          <div class="wib"><div class="wid">// May 2025</div><h3>Integration of Quantum Computing with Classical Data Systems</h3><p>Hybrid quantum/classical architectures — a practical engineering approach.</p></div>
+          <div class="wia">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ═══════════════════════════════════════════ -->
+  <section class="sec" id="contact">
+    <div class="con">
+      <div class="sec-lbl reveal"><span class="sn">09</span><span class="ss">//</span><span class="st">contact.init()</span></div>
+
+      <!-- Open to work banner -->
+      <div class="otw-banner reveal">
+        <div class="otw-inner">
+          <div class="otw-pip"></div>
+          <div class="otw-text">
+            <div class="otw-title">// open_to_work = true</div>
+            <div class="otw-roles">AI Engineer · ML Engineer · Applied Scientist · Research Engineer · LLM Engineer</div>
+            <div class="otw-note">US authorized · Available immediately · Open to remote, hybrid, on-site</div>
+          </div>
+          <a href="mailto:tirth5828@gmail.com" class="otw-btn">⚡ Let's talk</a>
+        </div>
+      </div>
+
+      <h2 class="sec-h reveal">Get in touch<span class="bc2">_</span></h2>
+      <p class="sec-sub reveal">Open to research collaborations, full-time roles, and good food recommendations.</p>
+
+      <div class="contact-grid reveal">
+        <a href="mailto:tirth5828@gmail.com" class="cc">
+          <div class="cci">✉</div>
+          <div class="ccl">// email</div>
+          <div class="ccv">tirth5828@gmail.com</div>
+        </a>
+        <a href="mailto:tjoshi1@mail.yu.edu" class="cc">
+          <div class="cci">@</div>
+          <div class="ccl">// academic</div>
+          <div class="ccv">tjoshi1@mail.yu.edu</div>
+        </a>
+        <a href="https://www.linkedin.com/in/tirth5828" target="_blank" rel="noopener" class="cc">
+          <div class="cci">in</div>
+          <div class="ccl">// linkedin</div>
+          <div class="ccv">/in/tirth5828</div>
+        </a>
+        <a href="https://github.com/tirth5828" target="_blank" rel="noopener" class="cc">
+          <div class="cci">⌥</div>
+          <div class="ccl">// github</div>
+          <div class="ccv">tirth5828 · 67 repos</div>
+        </a>
+        <a href="https://tirth5828.github.io" target="_blank" rel="noopener" class="cc">
+          <div class="cci">◈</div>
+          <div class="ccl">// portfolio</div>
+          <div class="ccv">tirth5828.github.io</div>
+        </a>
+        <a href="https://medium.com/@tirth5828" target="_blank" rel="noopener" class="cc">
+          <div class="cci">M</div>
+          <div class="ccl">// medium</div>
+          <div class="ccv">@tirth5828</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="con">
+      <div class="footer-in">
+        <span>[ TJ ] Tirth Joshi © 2025 · Built with HTML/CSS/JS · no_frameworks_harmed()</span>
+        <span class="fhint" id="footerHint">⚡ accio easter_egg</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
