@@ -72,7 +72,7 @@
       <li class="work">
         <div class="work-meta"><span class="chip chip-acc">ECCV 2026</span><span class="work-note">Main conference</span></div>
         <h3 class="work-t">Compositional Non-Face Re-Identification Pressure under Cumulative Vision Releases</h3>
-        <p class="work-p">You can be re-identified from vision data containing no faces at all, because ordinary non-face cues compose. And the risk accumulates across releases rather than resetting with each one.</p>
+        <p class="work-p">Vision privacy is assessed one release at a time, but identity survives that framing. Clothing, gait and scene context stay linkable and <strong>accumulate</strong> across dataset expansions, model checkpoints and metadata. We introduce vRPI, an Arimoto&ndash;R&eacute;nyi measure of re-identification pressure, prove it only ever rises under cumulative release, and bridge it exactly to Bayes-optimal guessing probability. It tracks real re-identification success <strong>even after every face is removed</strong>.</p>
       </li>
 
       <li class="work">
@@ -85,7 +85,7 @@
       <li class="work">
         <div class="work-meta"><span class="chip">AAAI-27</span><span class="work-note">Under review</span></div>
         <h3 class="work-t">Prompt-Time Selective Semantic De-Identification for Medical LLMs</h3>
-        <p class="work-p">Redacting a clinical note isn't enough when the surrounding context re-identifies the patient. The de-identification has to happen at prompt time and against the actual threat, not against a fixed template.</p>
+        <p class="work-p">Prompts sent to medical LLMs carry contextual detail that re-identifies patients even after standard redaction. A span-local transform types each span and edits only the flagged ones, keeping clinical text verbatim. It lands between Safe Harbor and aggressive redaction rather than beating both: less leakage than one, more preserved utility than the other. <strong>Deliberately not a free lunch</strong>, and the paper is explicit about where it costs.</p>
       </li>
 
     </ol>
@@ -110,7 +110,8 @@
         <span class="role-when">2026 —</span>
         <span class="role-b">
           <span class="role-t">AI Engineer <span class="role-org">A&amp;A Coatings</span></span>
-          <span class="role-p">Built the internal Sales AI platform: extraction from engineering drawings and coating specifications into quotable parameters, replacing a manual process. In production and generating customer quotes.</span>
+          <span class="role-p">Built a production sales and operations platform from zero. AI reads every inbound RFQ, classifies it, extracts the engineering requirements, pulls live ERP history and drafts a stage-aware reply before a rep opens the thread. It is also the first system ever to write into A&amp;A's JobBOSS&sup2; ERP, and it replaced the shop's scheduling spreadsheet with a digital twin. FastAPI, Next.js and PostgreSQL on Cloud Run, with Gemini on Vertex AI. Live, and used daily by the sales team.</span>
+          <span class="role-m"><span>58k lines · 1,800+ tests</span><span>450+ threads auto-classified</span><span>190+ production deploys</span></span>
         </span>
       </li>
 
@@ -118,7 +119,7 @@
         <span class="role-when">2026 —</span>
         <span class="role-b">
           <span class="role-t">AI Engineer <span class="role-org">uBuyFirst</span></span>
-          <span class="role-p">Search and evaluation harness for a real-time listings product, plus the developer documentation the team now ships against. Continuing through the fall term.</span>
+          <span class="role-p">Evaluation harness and working kit for SKU Manager, a real-time listings product, plus the developer documentation the team now ships against. Drove a live client build over a ~4,000-SKU buylist, where an internal endpoint judges item condition from listing text and prices it against market data into a buy, pass or verify signal. Continuing through the fall term.</span>
         </span>
       </li>
 
@@ -198,6 +199,7 @@
         <span class="pub-b">
           <span class="pub-t">Hierarchical Graph Representation for Multi-Chain Blockchain Routing</span>
           <span class="pub-a">Tirth Joshi, Honggang Wang · Maui, February 2026 ·
+            <a href="https://doi.org/10.1109/ICNC68183.2026.11416872" target="_blank" rel="noopener">DOI</a> ·
             <a href="https://www.yu.edu/news/katz/ieee-conference-ai-student-rethinks-how-money-moves-across-blockchains" target="_blank" rel="noopener">YU News</a>
           </span>
         </span>
@@ -227,35 +229,27 @@
           <span class="pub-a">Tirth Joshi, Honggang Wang</span>
         </span>
       </li>
-      <li class="pub">
-        <span class="pub-v">ACM FAccT</span>
-        <span class="pub-b">
-          <span class="pub-t">Measuring the Statistical Erosion of Anonymity: A Historical Analysis of Re-Identification Potential</span>
-          <span class="pub-a">Tirth Joshi, Aaron Ross</span>
-        </span>
-      </li>
-      <li class="pub">
-        <span class="pub-v">APF</span>
-        <span class="pub-b">
-          <span class="pub-t">Re-Identification Pressure under GDPR: Measuring Cumulative Identifiability in Data Ecosystems</span>
-          <span class="pub-a">Tirth Joshi et al.</span>
-        </span>
-      </li>
     </ul>
 
-    <h3 class="sub">In preparation</h3>
+    <h3 class="sub">Work in progress</h3>
     <ul class="pubs">
       <li class="pub">
-        <span class="pub-v">ACM AFT</span>
+        <span class="pub-v">Topology</span>
         <span class="pub-b">
-          <span class="pub-t">Soft-Landing Liquidations for Overcollateralized Lending</span>
-          <span class="pub-a">Tranche-based auctions as constrained sequential control</span>
+          <span class="pub-t">Conley&ndash;Morse certificates for the attractors of high-dimensional gradient flows</span>
+          <span class="pub-a">With Prof. Marian Gidea. Treating training as a dynamical system and asking which structures a gradient flow can be proven to settle into. C++ core built.</span>
+        </span>
+      </li>
+      <li class="pub">
+        <span class="pub-v">LLM security</span>
+        <span class="pub-b">
+          <span class="pub-t">Graph-based smart-contract vulnerability detection from bytecode</span>
+          <span class="pub-a">With Prof. Shucheng Yu. A bytecode-to-graph classifier cross-evaluated against the ESCORT corpus and a generated dataset, testing whether synthetic vulnerability data transfers to real contracts.</span>
         </span>
       </li>
     </ul>
 
     <ul class="alsos">
-      <li><span class="also-k">Ongoing</span> Conley–Morse theory applied to gradient descent, with Prof. Marian Gidea.</li>
       <li><span class="also-k">Selected</span> ELLIS Summer School 2026, TU Munich · Reinforcement Learning Summer School 2025.</li>
       <li><span class="also-k">Writing</span> A four-part series on quantum machine learning for engineers, <a href="https://medium.com/@tirth5828" target="_blank" rel="noopener">on Medium</a>.</li>
     </ul>
