@@ -64,7 +64,7 @@
   <section class="band" id="work" aria-labelledby="work-h">
     <p class="eyebrow">Selected work</p>
     <h2 class="band-h" id="work-h">
-      Three different systems. The same answer each time: removing information is not the same as it being gone.
+      Two different systems. The same answer each time: removing information is not the same as it being gone.
     </h2>
 
     <ol class="works">
@@ -81,12 +81,6 @@
         <h3 class="work-t">Unlearning Is Not Deletion: Auditing Residual Information in Released Vision Artifacts</h3>
         <p class="work-p">Unlearning is judged almost entirely on the model checkpoint. But deployed systems also ship embedding banks, class prototypes and retrieval indices, and editing a checkpoint cannot touch an artifact stored independently of it. Artifact Residual Risk audits what stays recoverable from those. On Market-1501 the result is stark: because retrieval encoders generalise, <strong>even retraining from scratch cannot remove an identity from the gallery</strong>. Unlearning the model is not deleting the data.</p>
         <p class="work-links"><a href="https://openreview.net/forum?id=NwdxtFrYCK" target="_blank" rel="noopener">OpenReview</a> &middot; <a href="https://tirth5828.github.io/unlearning-is-not-deletion/">Project page</a> &middot; <a href="https://github.com/tirth5828/unlearning-is-not-deletion" target="_blank" rel="noopener">Code</a></p>
-      </li>
-
-      <li class="work">
-        <div class="work-meta"><span class="chip">ICLR 2027</span><span class="work-note">Under review</span></div>
-        <h3 class="work-t">Opting Out Should Not Be Detectable: Fresh-Identity Indistinguishability for Identity Unlearning</h3>
-        <p class="work-p">When someone asks to be removed from a re-identification model, unlearning is usually judged by whether the model still recognises them. We ask a sharper question: can an observer tell that they opted out at all? Fresh-identity indistinguishability requires a forgotten identity to look exactly like one the model never saw, measured against a retrain-from-scratch oracle. Current methods fail it: forgotten identities stay measurably tighter than never-seen ones, across architectures, datasets and a deployed retrieval service. <strong>Forgetting someone can itself give them away.</strong></p>
       </li>
 
     </ol>
@@ -230,17 +224,6 @@
       </li>
     </ul>
 
-    <h3 class="sub">Under review</h3>
-    <ul class="pubs">
-      <li class="pub">
-        <span class="pub-v">ICLR 2027</span>
-        <span class="pub-b">
-          <span class="pub-t">Opting Out Should Not Be Detectable: Fresh-Identity Indistinguishability for Identity Unlearning</span>
-          <span class="pub-a">Tirth Joshi, Honggang Wang</span>
-        </span>
-      </li>
-    </ul>
-
     <h3 class="sub">Work in progress</h3>
     <ul class="pubs">
       <li class="pub">
@@ -248,13 +231,6 @@
         <span class="pub-b">
           <span class="pub-t">Conley&ndash;Morse certificates for the attractors of high-dimensional gradient flows</span>
           <span class="pub-a">With Prof. Marian Gidea. Treating training as a dynamical system and asking which structures a gradient flow can be proven to settle into. Experiments complete; paper in writing.</span>
-        </span>
-      </li>
-      <li class="pub">
-        <span class="pub-v">Medical LLMs</span>
-        <span class="pub-b">
-          <span class="pub-t">Prompt-time de-identification for medical LLMs</span>
-          <span class="pub-a">With Profs. Honggang Wang and Julia Fang. Prompts sent to medical LLMs carry contextual detail that re-identifies patients even after standard redaction; editing only the risky spans keeps the clinical text intact.</span>
         </span>
       </li>
       <li class="pub">
