@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hierarchical Graph Representation for Multi-Chain Blockchain Routing (IEEE ICNC 2026): Tirth Joshi</title>
+<meta name="description" content="IEEE ICNC 2026 paper by Tirth Joshi and Honggang Wang: multi-chain routing as search over a bounded-depth AND/OR graph, with chains modelled as buildings and abstraction levels as floors."/>
+<meta name="author" content="Tirth Joshi"/>
+<link rel="canonical" href="https://tirth5828.github.io/icnc-2026/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://tirth5828.github.io/icnc-2026/"/>
+<meta property="og:title" content="Hierarchical Graph Representation for Multi-Chain Blockchain Routing"/>
+<meta property="og:description" content="IEEE ICNC 2026. Multi-chain routing as search over a bounded-depth AND/OR graph."/>
+<meta name="twitter:card" content="summary"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="wordmark" href="../">Tirth Joshi</a>
+  <nav class="topnav" aria-label="Site">
+    <a href="../#experience">Experience</a>
+    <a href="../#research">Research</a>
+    <a href="../#play">Off the clock</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+  <button class="theme" id="themeBtn" type="button" aria-label="Switch to dark theme">
+    <span class="theme-dot" aria-hidden="true"></span>
+  </button>
+</header>
+
+<main id="main" class="page">
+  <a class="back" href="../#research">Back to the research list</a>
+  <h1 class="page-h">Hierarchical Graph Representation for Multi-Chain Blockchain Routing</h1>
+  <p class="page-meta"><strong>Tirth Joshi, Honggang Wang</strong></p>
+  <p class="page-meta">IEEE ICNC 2026, Invited Talks track · Maui, February 2026</p>
+  <p class="page-links">
+    <a href="https://doi.org/10.1109/ICNC68183.2026.11416872" target="_blank" rel="noopener">Paper (DOI)</a>
+    <a href="https://www.yu.edu/news/katz/ieee-conference-ai-student-rethinks-how-money-moves-across-blockchains" target="_blank" rel="noopener">YU News</a>
+  </p>
+
+  <p class="lede">
+    Assets on blockchains are built out of other assets. A liquidity-pool share needs both of its
+    underlying tokens; a vault receipt needs the pool share. A flat graph of tokens cannot say
+    &ldquo;needs all of these&rdquo;, so routes across chains either come out wrong or take a long search.
+    This paper gives routing that structure.
+  </p>
+
+  <section class="sec" aria-labelledby="b-h">
+    <h2 class="sec-h" id="b-h">Chains as buildings, levels as floors</h2>
+    <p>
+      Each chain is a building. Its floors are levels of abstraction: base tokens at the bottom,
+      liquidity shares above them, derivatives above those. Bridges connect the buildings.
+      A search stays on one floor before it moves between floors or chains, which keeps the part
+      of the graph it has to touch small.
+    </p>
+  </section>
+
+  <section class="sec" aria-labelledby="a-h">
+    <h2 class="sec-h" id="a-h">AND and OR</h2>
+    <p>
+      Routing then becomes a search over a weighted AND/OR graph. An <strong>OR</strong> node can be
+      reached through any one of its predecessors, so it behaves like an ordinary shortest-path step.
+      An <strong>AND</strong> node needs all of its predecessors at once, so its cost adds up every
+      incoming edge. Algorithm 1 in the paper, Bounded-AND Exact Path Enumeration, updates the cost of
+      a node <i>v</i> reached from <i>u</i> exactly this way:
+    </p>
+    <div class="eq">
+      <span class="m"><span class="m-k">OR</span> <i>C</i>′(<i>v</i>) ← <i>C</i>(<i>u</i>) + <i>w</i>(<i>u</i>, <i>v</i>)</span>
+      <span class="m"><span class="m-k">AND</span> <i>C</i>′(<i>v</i>) ← <i>C</i>(<i>u</i>) + <span class="big">Σ</span><sub><i>x</i> ∈ Γ<sup>−</sup>(<i>v</i>)</sub> <i>w</i>(<i>x</i>, <i>v</i>)</span>
+      <span class="eq-note">Γ<sup>−</sup>(<i>v</i>) is the set of predecessors of <i>v</i>. The update runs only while the AND depth stays within <i>d</i>′ ≤ 2.</span>
+    </div>
+
+    <figure class="fig">
+      <svg viewBox="0 0 640 220" role="img" aria-labelledby="ao-t">
+        <title id="ao-t">An example AND/OR graph: from a source, two base tokens are each reachable by OR edges. A pool share is an AND node that needs both base tokens. A vault receipt is an AND node that needs the pool share, then the target. The AND depth is 2.</title>
+        <defs>
+          <marker id="aho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker>
+        </defs>
+        <path class="dg-line" d="M62 100L158 62" marker-end="url(#aho)"/>
+        <path class="dg-line" d="M62 120L158 158" marker-end="url(#aho)"/>
+        <path class="dg-line" d="M202 62L318 102" marker-end="url(#aho)"/>
+        <path class="dg-line" d="M202 158L318 118" marker-end="url(#aho)"/>
+        <path class="dg-line" d="M280 89 Q 270 110 280 131"/>
+        <path class="dg-line" d="M362 110H458" marker-end="url(#aho)"/>
+        <path class="dg-line" d="M502 110H578" marker-end="url(#aho)"/>
+
+        <circle class="dg-node" cx="40" cy="110" r="22"/><text class="dg-t" x="40" y="115" text-anchor="middle">s</text>
+        <circle class="dg-node" cx="180" cy="55" r="22"/><text class="dg-t" x="180" y="60" text-anchor="middle">A</text>
+        <circle class="dg-node" cx="180" cy="165" r="22"/><text class="dg-t" x="180" y="170" text-anchor="middle">B</text>
+        <circle class="dg-node and" cx="340" cy="110" r="22"/><text class="dg-t" x="340" y="115" text-anchor="middle">LP</text>
+        <circle class="dg-node and" cx="480" cy="110" r="22"/><text class="dg-t" x="480" y="115" text-anchor="middle">V</text>
+        <circle class="dg-node" cx="600" cy="110" r="22"/><text class="dg-t" x="600" y="115" text-anchor="middle">t</text>
+
+        <text class="dg-s" x="40" y="152" text-anchor="middle">source</text>
+        <text class="dg-kr" x="180" y="22" text-anchor="middle">OR</text>
+        <text class="dg-s" x="180" y="208" text-anchor="middle">base tokens</text>
+        <text class="dg-kr" x="340" y="72" text-anchor="middle">AND, depth 1</text>
+        <text class="dg-s" x="340" y="152" text-anchor="middle">pool share,</text>
+        <text class="dg-s" x="340" y="167" text-anchor="middle">needs A and B</text>
+        <text class="dg-kr" x="480" y="72" text-anchor="middle">AND, depth 2</text>
+        <text class="dg-s" x="480" y="152" text-anchor="middle">vault receipt</text>
+        <text class="dg-s" x="600" y="152" text-anchor="middle">target</text>
+      </svg>
+      <figcaption>A small example. The arc at the pool share marks an AND: both incoming edges are needed, and both costs count.</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec" aria-labelledby="d-h">
+    <h2 class="sec-h" id="d-h">Why depth 2</h2>
+    <p>
+      In general, finding the cheapest route on an AND/OR graph is NP-hard; the paper shows it with
+      a reduction from 3-SAT. Real assets rarely nest deeper than two levels (base tokens, then pool
+      shares, then vault or derivative tokens), so the paper bounds the AND depth at 2. Under that
+      bound, exact path enumeration is polynomial. For large graphs, a greedy hybrid of Dijkstra's
+      algorithm that rebuilds sub-paths at each AND node runs in <i>O</i>(|<i>E</i>| log |<i>V</i>|).
+    </p>
+  </section>
+
+  <section class="sec" aria-labelledby="c-h">
+    <h2 class="sec-h" id="c-h">Cite</h2>
+<pre class="bib" id="bib">@inproceedings{joshi2026hierarchical,
+  author    = {Joshi, Tirth and Wang, Honggang},
+  title     = {Hierarchical Graph Representation for Multi-Chain Blockchain Routing},
+  booktitle = {2026 International Conference on Computing, Networking and Communications (ICNC)},
+  address   = {Maui, HI, USA},
+  year      = {2026},
+  doi       = {10.1109/ICNC68183.2026.11416872}
+}</pre>
+    <button class="copy" type="button" data-copy="bib">Copy BibTeX</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© 2026 Tirth Joshi</span>
+  <span>New York</span>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

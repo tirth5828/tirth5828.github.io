@@ -1,44 +1,39 @@
-# Tirth Joshi — Portfolio v3
+# tirth5828.github.io
 
-Dark, nerdy, dual-identity portfolio. Research + Engineering. Open to work.
+Personal site of Tirth Joshi: research on the left, production on the right.
 
-## Structure
-```
-portfolio-v3/
-├── index.html      ← Full page (9 sections)
-├── css/style.css   ← All styles (phosphor green / deep space)
-├── js/main.js      ← Matrix, graph, typewriter, Easter egg
-└── README.md
-```
+Plain HTML, CSS and JavaScript on GitHub Pages. No framework, no build step.
 
-## Deploy to GitHub Pages
+| Path | What it is |
+|---|---|
+| `index.html` | Home page: the split-face hero, experience, research, off the clock, contact |
+| `style.css` | All styles, light and dark themes |
+| `main.js` | Theme toggle, hover-card dismissal, BibTeX copy (shared by every page) |
+| `hero.js` | Draws the split face on a canvas from `face.json` |
+| `face.json` | A quantised darkness grid (figure mask plus 8 levels). Not a photograph |
+| `play.js` | The off-the-clock tiles: Morse, archery, Spanish, books |
+| `icnc-2026/`, `nsia-2026/` | Paper pages |
+| `work/sales-ops-platform/`, `work/ai-harness/` | Project pages |
+
+The ECCV, unlearning and gradient-conflict project pages live in their own repositories.
+
+## Preview locally
 
 ```bash
-git init
-git add .
-git commit -m "Portfolio v3"
-git branch -M main
-git remote add origin https://github.com/tirth5828/<repo>.git
-git push -u origin main
+python -m http.server 8000
 ```
-Then: **Settings → Pages → Source: main → / (root)**
 
-For user site (`tirth5828.github.io`): repo must be named `tirth5828.github.io`.
+Then open http://localhost:8000/. The face needs `http://`, not `file://`, because `hero.js` fetches `face.json`.
 
-## ⚡ Harry Potter Easter Egg — 4 triggers
-1. Click the **terminal bio card** in About
-2. Click **`⚡ accio easter_egg`** in the footer  
-3. **Konami code**: ↑ ↑ ↓ ↓ ← → ← → B A
-4. Type **`lumos`** anywhere on the page
+## The production half of the face
 
-## New in v3
-- Open-to-work banner + hero badge
-- Dual identity strip (Researcher + Engineer)
-- "What I Build" engineering section with impact metrics
-- 4th research direction: Prof. Marian Gidea · Topology + GD
-- NSIA/NetSci abstract (Morse-Seeded Coresets)
-- All 5 under-review/to-submit papers updated
-- RLSS 2025 selection noted
-- YU Symposium upcoming talk callout
-- `hire_me()` button in nav + contact section open-to-work CTA
-- Metrics strip with quantified engineering impact
+`hero.js` can draw the right side of the face four ways. The live one is set by `data-prod` on the canvas in `index.html`:
+
+- `code`: a code minimap; tokens near the cursor light up in syntax colours (live)
+- `circuit`: the same contours as the research side, routed like PCB traces
+- `layout`: UI panels, finer at the features
+- `tiles`: the first version, rounded tiles sized by darkness
+
+## Changing the book
+
+Edit the `book-now` line in `index.html`. A one-line takeaway goes in the `book-take` paragraph right below it; the tile shows it on hover once it has text.

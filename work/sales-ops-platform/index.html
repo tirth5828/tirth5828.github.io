@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An AI sales and operations platform, built solo: Tirth Joshi</title>
+<meta name="description" content="How Tirth Joshi built, on his own, a production AI platform that reads a sales inbox, extracts specs from RFQs and drawings, drafts replies for a person to approve, and replaced a spreadsheet schedule."/>
+<meta name="author" content="Tirth Joshi"/>
+<link rel="canonical" href="https://tirth5828.github.io/work/sales-ops-platform/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://tirth5828.github.io/work/sales-ops-platform/"/>
+<meta property="og:title" content="An AI sales and operations platform, built solo"/>
+<meta property="og:description" content="A production AI platform in daily use: email intake with LLM extraction and human approval, a live production schedule, quotes and analytics."/>
+<meta name="twitter:card" content="summary"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../style.css"/>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="wordmark" href="../../">Tirth Joshi</a>
+  <nav class="topnav" aria-label="Site">
+    <a href="../../#experience">Experience</a>
+    <a href="../../#research">Research</a>
+    <a href="../../#play">Off the clock</a>
+    <a href="../../#contact">Contact</a>
+  </nav>
+  <button class="theme" id="themeBtn" type="button" aria-label="Switch to dark theme">
+    <span class="theme-dot" aria-hidden="true"></span>
+  </button>
+</header>
+
+<main id="main" class="page">
+  <a class="back" href="../../">Back to the home page</a>
+  <h1 class="page-h">An AI sales and operations platform, built solo</h1>
+  <p class="page-meta"><strong>A&amp;A Coatings</strong> · AI Engineer Intern · 2026</p>
+
+  <p class="lede">
+    A real application, used every day at a real company. I built it on my own, and it replaced
+    a sales inbox read by hand, a spreadsheet schedule and quotes buried in mail threads.
+    This page is about how it is built and what it took.
+  </p>
+
+  <section class="sec" id="before-after" aria-labelledby="ba-h">
+    <h2 class="sec-h" id="ba-h">What it replaced</h2>
+    <ul class="ba">
+      <li><span class="ba-was">Sales inbox read by hand</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-now"><span class="sr">Now: </span>AI classifies each email, extracts the specs from RFQs and drawings, and drafts a reply that a person reviews and sends</span></li>
+      <li><span class="ba-was">Spreadsheet schedule</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-now"><span class="sr">Now: </span>Live production schedule</span></li>
+      <li><span class="ba-was">Quotes in mail threads</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-now"><span class="sr">Now: </span>Quote workspace and deal pipeline</span></li>
+      <li><span class="ba-was">Manual reports</span><span class="ba-arrow" aria-hidden="true">→</span><span class="ba-now"><span class="sr">Now: </span>Built-in analytics</span></li>
+    </ul>
+  </section>
+
+  <section class="sec" id="intake" aria-labelledby="intake-h">
+    <h2 class="sec-h" id="intake-h">The intake pipeline</h2>
+    <p>
+      Every inbound email takes the same path. A classifier decides what kind of email it is.
+      For a request for quote, an LLM reads the attachments, PDFs and engineering drawings included,
+      and turns them into a structured specification. The system looks up similar past jobs through
+      the ERP's API and drafts a reply with that context. Nothing is sent on its own:
+      a person reads the draft, changes it if needed, and sends it.
+    </p>
+
+    <figure class="fig">
+      <svg class="dg-wide" viewBox="0 0 960 290" role="img" aria-labelledby="dg1-t">
+        <title id="dg1-t">Intake pipeline: email in, classify, extract with an LLM, look up past jobs in the ERP, draft a reply, and a person approves and sends it. Underneath: FastAPI, Next.js, PostgreSQL on Cloud SQL, Cloud Run, Gemini on Vertex AI, and Google sign-in with roles and an audit log.</title>
+        <defs>
+          <marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker>
+        </defs>
+        <g>
+          <rect class="dg-box" x="1" y="20" width="132" height="84" rx="9"/>
+          <text class="dg-t" x="16" y="48">Email in</text>
+          <text class="dg-s" x="16" y="68">the sales inbox</text>
+
+          <rect class="dg-box res" x="165" y="20" width="132" height="84" rx="9"/>
+          <text class="dg-t" x="180" y="48">Classify</text>
+          <text class="dg-s" x="180" y="68">what kind of email</text>
+          <text class="dg-s" x="180" y="84">is this?</text>
+
+          <rect class="dg-box res" x="329" y="20" width="132" height="84" rx="9"/>
+          <text class="dg-t" x="344" y="48">Extract</text>
+          <text class="dg-s" x="344" y="68">LLM reads RFQs,</text>
+          <text class="dg-s" x="344" y="84">PDFs and drawings</text>
+
+          <rect class="dg-box" x="493" y="20" width="132" height="84" rx="9"/>
+          <text class="dg-t" x="508" y="48">Look up</text>
+          <text class="dg-s" x="508" y="68">past jobs, through</text>
+          <text class="dg-s" x="508" y="84">the ERP's API</text>
+
+          <rect class="dg-box res" x="657" y="20" width="132" height="84" rx="9"/>
+          <text class="dg-t" x="672" y="48">Draft</text>
+          <text class="dg-s" x="672" y="68">a reply, with the</text>
+          <text class="dg-s" x="672" y="84">job's context</text>
+
+          <rect class="dg-box human" x="821" y="20" width="136" height="84" rx="9"/>
+          <text class="dg-t" x="836" y="48">Approve</text>
+          <text class="dg-s" x="836" y="68">a person reviews,</text>
+          <text class="dg-s" x="836" y="84">edits and sends</text>
+
+          <path class="dg-line" d="M133 62H163" marker-end="url(#ah1)"/>
+          <path class="dg-line" d="M297 62H327" marker-end="url(#ah1)"/>
+          <path class="dg-line" d="M461 62H491" marker-end="url(#ah1)"/>
+          <path class="dg-line" d="M625 62H655" marker-end="url(#ah1)"/>
+          <path class="dg-line" d="M789 62H819" marker-end="url(#ah1)"/>
+
+          <path class="dg-line soft" d="M67 104V160M231 104V160M395 104V160M559 104V160M723 104V160M889 104V160"/>
+
+          <rect class="dg-band" x="1" y="160" width="956" height="118" rx="10"/>
+          <text class="dg-m" x="20" y="186">underneath</text>
+          <g class="dg-chips">
+            <rect class="dg-box" x="20" y="200" width="96" height="30" rx="6"/><text class="dg-t" x="33" y="220">FastAPI</text>
+            <rect class="dg-box" x="126" y="200" width="92" height="30" rx="6"/><text class="dg-t" x="139" y="220">Next.js</text>
+            <rect class="dg-box" x="228" y="200" width="206" height="30" rx="6"/><text class="dg-t" x="241" y="220">PostgreSQL on Cloud SQL</text>
+            <rect class="dg-box" x="444" y="200" width="106" height="30" rx="6"/><text class="dg-t" x="457" y="220">Cloud Run</text>
+            <rect class="dg-box res" x="560" y="200" width="180" height="30" rx="6"/><text class="dg-t" x="573" y="220">Gemini on Vertex AI</text>
+            <rect class="dg-box" x="20" y="238" width="330" height="30" rx="6"/><text class="dg-t" x="33" y="258">Google sign-in, roles and an audit log</text>
+            <rect class="dg-box" x="360" y="238" width="250" height="30" rx="6"/><text class="dg-t" x="373" y="258">Alembic migrations, live data</text>
+          </g>
+        </g>
+      </svg>
+
+      <svg class="dg-tall" viewBox="0 0 340 620" role="img" aria-labelledby="dg1b-t">
+        <title id="dg1b-t">Intake pipeline: email in, classify, extract with an LLM, look up past jobs in the ERP, draft a reply, and a person approves and sends it.</title>
+        <defs>
+          <marker id="ah1b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker>
+        </defs>
+        <rect class="dg-box" x="1" y="1" width="338" height="56" rx="9"/>
+        <text class="dg-t" x="16" y="26">Email in</text><text class="dg-s" x="16" y="44">the sales inbox</text>
+        <rect class="dg-box res" x="1" y="81" width="338" height="56" rx="9"/>
+        <text class="dg-t" x="16" y="106">Classify</text><text class="dg-s" x="16" y="124">what kind of email is this?</text>
+        <rect class="dg-box res" x="1" y="161" width="338" height="56" rx="9"/>
+        <text class="dg-t" x="16" y="186">Extract</text><text class="dg-s" x="16" y="204">LLM reads RFQs, PDFs and drawings</text>
+        <rect class="dg-box" x="1" y="241" width="338" height="56" rx="9"/>
+        <text class="dg-t" x="16" y="266">Look up</text><text class="dg-s" x="16" y="284">past jobs, through the ERP's API</text>
+        <rect class="dg-box res" x="1" y="321" width="338" height="56" rx="9"/>
+        <text class="dg-t" x="16" y="346">Draft</text><text class="dg-s" x="16" y="364">a reply, with the job's context</text>
+        <rect class="dg-box human" x="1" y="401" width="338" height="56" rx="9"/>
+        <text class="dg-t" x="16" y="426">Approve</text><text class="dg-s" x="16" y="444">a person reviews, edits and sends</text>
+        <path class="dg-line" d="M170 57V79" marker-end="url(#ah1b)"/><path class="dg-line" d="M170 137V159" marker-end="url(#ah1b)"/><path class="dg-line" d="M170 217V239" marker-end="url(#ah1b)"/><path class="dg-line" d="M170 297V319" marker-end="url(#ah1b)"/><path class="dg-line" d="M170 377V399" marker-end="url(#ah1b)"/>
+        <rect class="dg-band" x="1" y="481" width="338" height="138" rx="10"/>
+        <text class="dg-m" x="16" y="505">underneath</text>
+        <text class="dg-t" x="16" y="530">FastAPI · Next.js · Cloud Run</text>
+        <text class="dg-t" x="16" y="552">PostgreSQL on Cloud SQL</text>
+        <text class="dg-t" x="16" y="574">Gemini on Vertex AI</text>
+        <text class="dg-t" x="16" y="596">Google sign-in, roles, audit log</text>
+      </svg>
+      <figcaption>Drawn for this page. No screens or data from the real system.</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec" id="scheduling" aria-labelledby="sched-h">
+    <h2 class="sec-h" id="sched-h">The schedule</h2>
+    <p>
+      The shop's production schedule used to live in a spreadsheet. It now lives in the platform
+      as a live schedule: one shared, current view of the work, inside the same platform as
+      everything else. Quotes moved the same way, out of mail threads and into a quote
+      workspace with a deal pipeline, and the reports people used to build by hand are now built-in analytics.
+    </p>
+  </section>
+
+  <section class="sec" id="skills" aria-labelledby="skills-h">
+    <h2 class="sec-h" id="skills-h">What it took</h2>
+    <ul class="skills">
+      <li><span class="skill-k">LLM structured extraction from messy documents</span><span class="skill-v">Reading RFQs, PDFs and engineering drawings into a structured spec. <a href="#intake">Intake</a></span></li>
+      <li><span class="skill-k">Classification with a human in the loop</span><span class="skill-v">Every inbound email is sorted; a person approves every reply. <a href="#intake">Intake</a></span></li>
+      <li><span class="skill-k">Schema migrations on a live database</span><span class="skill-v">150+ Alembic migrations on PostgreSQL while people use it, without losing data.</span></li>
+      <li><span class="skill-k">ERP API integration</span><span class="skill-v">Looking up past jobs to ground each draft. <a href="#intake">Intake</a></span></li>
+      <li><span class="skill-k">Auth with roles and audit logging</span><span class="skill-v">Google sign-in, role-based access, and a record of who did what.</span></li>
+      <li><span class="skill-k">Cloud deploy and operations</span><span class="skill-v">FastAPI and Next.js on Cloud Run, PostgreSQL on Cloud SQL, Gemini on Vertex AI.</span></li>
+      <li><span class="skill-k">Turning spreadsheet workflows into features people use</span><span class="skill-v">The schedule, the quote workspace and the analytics. <a href="#scheduling">Schedule</a></span></li>
+    </ul>
+
+    <ul class="stack" aria-label="Stack">
+      <li>FastAPI</li><li>Next.js</li><li>PostgreSQL (Cloud SQL)</li><li>Alembic</li><li>Cloud Run</li><li>Gemini on Vertex AI</li><li>Google sign-in</li>
+    </ul>
+
+    <h3 class="sub-h" id="numbers">The repository, counted</h3>
+    <dl class="readout">
+      <div><dt>Commits</dt><dd>3,003</dd></div>
+      <div><dt>Application code</dt><dd>180k lines</dd></div>
+      <div><dt>Tests</dt><dd>8,300+ <span>(120k lines)</span></dd></div>
+      <div><dt>API endpoints</dt><dd>590+</dd></div>
+      <div><dt>Pages in the web app</dt><dd>78</dd></div>
+      <div><dt>Database migrations</dt><dd>150+ <span>on live data</span></dd></div>
+    </dl>
+    <p class="readout-note">Counted from the repository on 10 November 2026. Lines are non-blank lines in tracked source files.</p>
+  </section>
+
+  <p class="sec"><a class="role-link" href="../ai-harness/">Next: AI harnesses for a fast-moving product team</a></p>
+</main>
+
+<footer class="foot">
+  <span>© 2026 Tirth Joshi</span>
+  <span>New York</span>
+</footer>
+
+<script src="../../main.js"></script>
+</body>
+</html>
